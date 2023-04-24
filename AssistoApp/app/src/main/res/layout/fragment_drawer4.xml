@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#004C69"
+    tools:context=".Drawer4Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="376dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="Descubre nuevos compañeros en el refugio "
+        android:textColor="#FFEB3B"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="390dp"
+        android:layout_height="165dp"
+        android:gravity="center"
+        android:text="Conoce al Señor Mañoso! nuestro robot de compañia diseñado para las labores domesticas y sus hermanos los Señores Agallas, equipados con la última tecnología en combates de corta distancia, armados con sierras mecánicas y lanzallamas. "
+        android:textColor="#FFEB3B"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="404dp"
+        android:layout_height="268dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:srcCompat="@drawable/_4" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="400dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/_5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/drawer1Fragment"
+        android:title="Información del Refugio" />
+
+    <item
+        android:id="@+id/drawer2Fragment"
+        android:title="Ayudas S.P.E.C.I.A.L.E.S"/>
+
+    <item
+        android:id="@+id/drawer3Fragment"
+        android:title="Servoarmaduras"/>
+
+    <item
+        android:id="@+id/drawer4Fragment"
+        android:title="Señores Mañoso y Agallas"/>
+
+</menu>

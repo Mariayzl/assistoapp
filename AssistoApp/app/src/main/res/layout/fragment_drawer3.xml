@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#004C69"
+    tools:context=".Drawer3Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="376dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="¡Consigue con nosotros tu propia Servoarmadura!"
+        android:textColor="#FFEB3B"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="372dp"
+        android:layout_height="198dp"
+        android:gravity="center"
+        android:text="Proporciona las siguientes ventajas: Reduce significativamente el daño recibido, aumenta el daño cuerpo a cuerpo, aumenta la capacidad de carga, evita el daño por caídas y cuando el casco está equipado, aumenta el tiempo que aguantas bajo el agua."
+        android:textColor="#FFEB3B"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="404dp"
+        android:layout_height="268dp"
+        android:src="@drawable/_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:srcCompat="@drawable/_3" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="350dp"
+        android:layout_height="68dp"
+        android:gravity="center"
+        android:text="La servoarmadura es la forma más avanzada de protección que puedes encontrar."
+        android:textColor="#FF9800"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
