@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,67 +10,114 @@
     <!-- TODO: Update blank fragment layout -->
 
     <TextView
-        android:id="@+id/textView11"
-        android:layout_width="376dp"
-        android:layout_height="72dp"
-        android:layout_marginTop="4dp"
+        android:id="@+id/tvMapa"
+        android:layout_width="143dp"
+        android:layout_height="104dp"
         android:gravity="center"
-        android:text="Infomación del Refugio"
-        android:textColor="#FFEB3B"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="393dp"
-        android:layout_height="165dp"
-        android:gravity="center"
-        android:text="¿Necesita protección ante una amenaza o conflicto nuclear? No dudes más y ven a nuestro refugio! Nuestras instalaciones subterráneas cuentan con todo tipo de servicios, desde puertas blindadas, sistemas de agua potable, granjas de hidro-agricultura o asistentes robots.  "
-        android:textColor="#FFEB3B"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="404dp"
-        android:layout_height="268dp"
-        android:layout_marginTop="4dp"
-        android:src="@drawable/_1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="314dp"
-        android:layout_height="56dp"
-        android:gravity="center"
-        android:text="¡Te estamos esperando!"
+        android:text="Mapa movilidad reducida"
         android:textColor="#FFEB3B"
         android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvMisanuncios"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMapa"
+        app:layout_constraintVertical_bias="0.172" />
+
+    <TextView
+        android:id="@+id/tvMisanuncios"
+        android:layout_width="143dp"
+        android:layout_height="77dp"
+        android:gravity="center"
+        android:text="Mis anuncios"
+        android:textColor="#FFEB3B"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvMapa"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonMiperfil"
+        app:layout_constraintVertical_bias="0.164" />
 
     <Button
-        android:id="@+id/buttonUbicacion"
-        android:layout_width="176dp"
-        android:layout_height="60dp"
-        android:text="Ubicación"
+        android:id="@+id/buttonMapa"
+        android:layout_width="139dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="64dp"
         android:backgroundTint="#FF9800"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Ubicación"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toEndOf="@+id/buttonMiperfil"
+        app:layout_constraintTop_toBottomOf="@+id/tvCuidados" />
+
+    <Button
+        android:id="@+id/buttonCuidados"
+        android:layout_width="139dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#FF9800"
+        android:text="Ubicación"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonAsistente"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloAssisto" />
+
+    <TextView
+        android:id="@+id/tvCuidados"
+        android:layout_width="143dp"
+        android:layout_height="32dp"
+        android:gravity="center"
+        android:text="Cuidados"
+        android:textColor="#FFEB3B"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvAsistente"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCuidados" />
+
+    <Button
+        android:id="@+id/buttonMiperfil"
+        android:layout_width="139dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="64dp"
+        android:backgroundTint="#FF9800"
+        android:text="Ubicación"
+        app:layout_constraintEnd_toStartOf="@+id/buttonMapa"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
-        app:layout_constraintVertical_bias="0.211" />
+        app:layout_constraintTop_toBottomOf="@+id/tvAsistente" />
+
+    <Button
+        android:id="@+id/buttonAsistente"
+        android:layout_width="139dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#FF9800"
+        android:text="Ubicación"
+        app:layout_constraintEnd_toStartOf="@+id/buttonCuidados"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloAssisto" />
+
+    <TextView
+        android:id="@+id/tvTituloAssisto"
+        android:layout_width="376dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Assisto"
+        android:textColor="#FFEB3B"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAsistente"
+        android:layout_width="143dp"
+        android:layout_height="32dp"
+        android:gravity="center"
+        android:text="Asistente"
+        android:textColor="#FFEB3B"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvCuidados"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAsistente" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

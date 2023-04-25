@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,55 +10,101 @@
     <!-- TODO: Update blank fragment layout -->
 
     <TextView
-        android:id="@+id/textView11"
-        android:layout_width="376dp"
-        android:layout_height="72dp"
-        android:layout_marginTop="16dp"
+        android:id="@+id/tvFiltrotexto1"
+        android:layout_width="381dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="5dp"
         android:gravity="center"
-        android:text="Sé la mejor versión de ti mismo"
+        android:text="Encuentra lo que buscas cerca de ti. Utiliza los filtros por ciudad para mejorar sus resultados de búsqueda."
         android:textColor="#FFEB3B"
-        android:textSize="30sp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerviewAsistente"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etbusqueda" />
+
+    <TextView
+        android:id="@+id/tvFiltro1"
+        android:layout_width="65dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="129dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="3dp"
+        android:gravity="center"
+        android:text="filtro:"
+        android:textColor="#FFEB3B"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/etbusqueda"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvUltimoanuncio1"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloAsistente" />
+
+    <TextView
+        android:id="@+id/tvTituloAsistente"
+        android:layout_width="266dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="Asistentes"
+        android:textColor="#FFEB3B"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView12"
-        android:layout_width="390dp"
-        android:layout_height="204dp"
+        android:id="@+id/tvUltimoanuncio1"
+        android:layout_width="161dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
         android:gravity="center"
-        android:text="En nuestro refugio encontralas todas las herramientas S.P.E.C.I.A.L.E.S necesarias para desarrollar todo tu pontecial en el papel que elijas! Como residente ejemplar es tu deber estar preparado para cuando sea ¡hora de salir a la superficie! "
+        android:text="Últimos anuncios"
         android:textColor="#FFEB3B"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintBottom_toTopOf="@+id/etbusqueda"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloAsistente" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="404dp"
-        android:layout_height="268dp"
+    <EditText
+        android:id="@+id/etbusqueda"
+        android:layout_width="354dp"
+        android:layout_height="54dp"
         android:layout_marginTop="4dp"
-        android:src="@drawable/_2"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="búsque campo ..."
+        app:layout_constraintBottom_toTopOf="@+id/tvFiltrotexto1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11"
-        app:srcCompat="@drawable/_2" />
+        app:layout_constraintTop_toBottomOf="@+id/tvUltimoanuncio1" />
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="305dp"
-        android:layout_height="46dp"
-        android:gravity="center"
-        android:text="¡Unete a nuestras filas!"
-        android:textColor="#FFEB3B"
-        android:textSize="26sp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewAsistente"
+        android:layout_width="399dp"
+        android:layout_height="311dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFiltrotexto1" />
+
+    <Button
+        android:id="@+id/buttonCrear1"
+        android:layout_width="242dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="76dp"
+        android:text="Crear anuncio Asistente"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerviewAsistente"
         app:layout_constraintVertical_bias="0.0" />
 
 

@@ -11,7 +11,7 @@
     <!-- TODO: Update blank fragment layout -->
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/tvTituloAsistente"
         android:layout_width="376dp"
         android:layout_height="72dp"
         android:layout_marginTop="28dp"
@@ -25,7 +25,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/tvUltimoanuncio1"
         android:layout_width="390dp"
         android:layout_height="165dp"
         android:gravity="center"
@@ -46,7 +46,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloAsistente"
         app:srcCompat="@drawable/_4" />
 
     <ImageView
@@ -57,7 +57,7 @@
         android:src="@drawable/_5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/tvUltimoanuncio1"
         app:layout_constraintVertical_bias="0.0" />
 
 

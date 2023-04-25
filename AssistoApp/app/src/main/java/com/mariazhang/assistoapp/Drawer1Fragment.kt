@@ -41,11 +41,12 @@ class Drawer1Fragment : Fragment() {
         return inflater.inflate(R.layout.fragment_drawer1, container, false)
     }
 
+    //*****Codigo antiguo botón
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         super.onViewCreated(view, savedInstanceState)
 
-        val buttonUbicacion = view.findViewById<Button>(R.id.buttonUbicacion)
+        val buttonUbicacion = view.findViewById<Button>(R.id.buttonAsistente)
 
         buttonUbicacion.setOnClickListener() {
             val intent = Intent(view.context,BottomActivity2::class.java)
