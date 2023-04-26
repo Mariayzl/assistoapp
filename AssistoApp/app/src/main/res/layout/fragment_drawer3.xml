@@ -12,10 +12,10 @@
     <TextView
         android:id="@+id/tvFiltrotexto2"
         android:layout_width="381dp"
-        android:layout_height="42dp"
+        android:layout_height="82dp"
         android:layout_marginBottom="5dp"
         android:gravity="center"
-        android:text="Encuentra lo que buscas cerca de ti. Utiliza los filtros por ciudad para mejorar sus resultados de búsqueda."
+        android:text="Encuentra lo que buscas cerca de ti. Utiliza los filtros por tipo de discapacidad o ciudad, para mejorar sus resultados de búsqueda."
         android:textColor="#FFEB3B"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/recyclerviewCuidados"

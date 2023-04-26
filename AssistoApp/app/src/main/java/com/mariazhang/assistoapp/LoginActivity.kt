@@ -27,6 +27,7 @@ class LoginActivity : AppCompatActivity() {
 
 
         binding.bLoginIniciar.setOnClickListener {
+
             val intent = Intent(this, IniciarcuentaActivity::class.java)
             startActivity(intent)
 
@@ -39,6 +40,8 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
+
+
     }
 
 
