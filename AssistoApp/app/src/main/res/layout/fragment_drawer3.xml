@@ -10,54 +10,103 @@
     <!-- TODO: Update blank fragment layout -->
 
     <TextView
-        android:id="@+id/tvTituloAsistente"
-        android:layout_width="376dp"
-        android:layout_height="72dp"
-        android:layout_marginTop="28dp"
+        android:id="@+id/tvFiltrotexto2"
+        android:layout_width="381dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="5dp"
         android:gravity="center"
-        android:text="¡Consigue con nosotros tu propia Servoarmadura!"
+        android:text="Encuentra lo que buscas cerca de ti. Utiliza los filtros por ciudad para mejorar sus resultados de búsqueda."
         android:textColor="#FFEB3B"
-        android:textSize="30sp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerviewCuidados"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etbusqueda2" />
+
+    <TextView
+        android:id="@+id/tvFiltro2"
+        android:layout_width="65dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="129dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="3dp"
+        android:gravity="center"
+        android:text="filtro:"
+        android:textColor="#FFEB3B"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/etbusqueda2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvUltimoanuncio2"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloCuidados" />
+
+    <TextView
+        android:id="@+id/tvTituloCuidados"
+        android:layout_width="266dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="Cuidados"
+        android:textColor="#FFEB3B"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvUltimoanuncio1"
-        android:layout_width="372dp"
-        android:layout_height="198dp"
+        android:id="@+id/tvUltimoanuncio2"
+        android:layout_width="161dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
         android:gravity="center"
-        android:text="Proporciona las siguientes ventajas: Reduce significativamente el daño recibido, aumenta el daño cuerpo a cuerpo, aumenta la capacidad de carga, evita el daño por caídas y cuando el casco está equipado, aumenta el tiempo que aguantas bajo el agua."
+        android:text="Últimos anuncios"
         android:textColor="#FFEB3B"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/etbusqueda2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloCuidados" />
+
+    <EditText
+        android:id="@+id/etbusqueda2"
+        android:layout_width="354dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="búsque campo ..."
+        app:layout_constraintBottom_toTopOf="@+id/tvFiltrotexto2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvUltimoanuncio2" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewCuidados"
+        android:layout_width="399dp"
+        android:layout_height="311dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFiltrotexto2" />
+
+    <Button
+        android:id="@+id/buttonCrear2"
+        android:layout_width="242dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="76dp"
+        android:text="Crear anuncio Asistente"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvAsistente"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerviewCuidados"
         app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="404dp"
-        android:layout_height="268dp"
-        android:src="@drawable/_3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTituloAsistente"
-        app:srcCompat="@drawable/_3" />
-
-    <TextView
-        android:id="@+id/tvAsistente"
-        android:layout_width="350dp"
-        android:layout_height="68dp"
-        android:gravity="center"
-        android:text="La servoarmadura es la forma más avanzada de protección que puedes encontrar."
-        android:textColor="#FF9800"
-        android:textSize="26sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

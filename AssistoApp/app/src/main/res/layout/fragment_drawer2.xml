@@ -22,7 +22,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etbusqueda" />
+        app:layout_constraintTop_toBottomOf="@+id/etbusqueda2" />
 
     <TextView
         android:id="@+id/tvFiltro1"
@@ -36,7 +36,7 @@
         android:text="filtro:"
         android:textColor="#FFEB3B"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/etbusqueda"
+        app:layout_constraintBottom_toTopOf="@+id/etbusqueda2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/tvUltimoanuncio1"
@@ -66,12 +66,12 @@
         android:text="Últimos anuncios"
         android:textColor="#FFEB3B"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/etbusqueda"
+        app:layout_constraintBottom_toTopOf="@+id/etbusqueda2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTituloAsistente" />
 
     <EditText
-        android:id="@+id/etbusqueda"
+        android:id="@+id/etbusqueda2"
         android:layout_width="354dp"
         android:layout_height="54dp"
         android:layout_marginTop="4dp"
