@@ -1,100 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CrearAnuncioAsistenteActivity">
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        tools:context=".CrearAnuncioAsistenteActivity"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-      >
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/tvTituloAsistente2"
-            android:layout_width="266dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="127dp"
             android:gravity="center"
+            android:paddingHorizontal="30dp"
+            android:paddingVertical="20dp"
             android:text="Asistentes"
             android:textColor="#3F51B5"
-            android:textSize="34sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textSize="34sp" />
 
         <TextView
             android:id="@+id/tvCreaAnuncio1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Crear Anuncio"
+            android:textColor="#3F51B5"
             android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvTituloAsistente2" />
+            tools:layout_editor_absoluteX="142dp"
+            tools:layout_editor_absoluteY="84dp" />
 
         <TextView
             android:id="@+id/tvEnunciado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Enunciado"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvCreaAnuncio1" />
+            android:textColor="#3F51B5"
+
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:textSize="20sp"
+            android:textColor="#3F51B5" />
 
         <TextView
             android:id="@+id/tvDescrip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Descripción"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
-
-        <EditText
-            android:id="@+id/editTextTextPersonName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-        <EditText
-            android:id="@+id/editTextTextPersonName2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvEnunciado" />
+            android:text="Descripción1"
+            android:textSize="50sp"
+            android:textColor="#3F51B5" />
 
         <EditText
             android:id="@+id/editTextTextPersonName3"
-            android:layout_width="333dp"
-            android:layout_height="216dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Name"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvDescrip" />
+            android:textSize="50sp"
+            android:textColor="#3F51B5" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/tvDescripcion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+            android:text="Descripción2"
+            android:textSize="50sp"
+            android:textColor="#3F51B5" />
+
+        <EditText
+            android:id="@+id/editTextNuevo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Escribe algo aquí2"
+            android:textSize="50sp"
+            android:textColor="#3F51B5" />
+        <TextView
+            android:id="@+id/tvDescripcion3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descripción3"
+            android:textSize="50sp"
+            android:textColor="#3F51B5" />
+
+        <EditText
+            android:id="@+id/editTextNuevo3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Escribe algo aquí3"
+            android:textColor="#3F51B5" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Crear anuncio" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Volver" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
+
+</ScrollView>
