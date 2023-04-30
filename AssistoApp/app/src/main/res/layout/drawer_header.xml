@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#FFEB3B"
+    android:background="#3F51B5"
     android:gravity="center"
     android:orientation="vertical">
 
@@ -19,6 +19,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
-        android:text="El Refugio de María"
-        android:textColor="#3F51B5"/>
+        android:text="Juntos por un bienestar compartido"
+        android:textColor="#FFC107"/>
 </LinearLayout>

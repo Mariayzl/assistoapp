@@ -1,10 +1,12 @@
 package com.mariazhang.assistoapp
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -37,6 +39,18 @@ class Drawer3Fragment : Fragment() {
         return inflater.inflate(R.layout.fragment_drawer3, container, false)
     }
 
+    //Función para botón Crear anuncio cuidado
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        super.onViewCreated(view, savedInstanceState)
+
+        val buttonCrearCuidados = view.findViewById<Button>(R.id.buttonCrear2)
+
+        buttonCrearCuidados.setOnClickListener() {
+            val intent = Intent(view.context,CrearAnuncioCuidadosActivity::class.java)
+            startActivity(intent)
+        }
+    }
     companion object {
         /**
          * Use this factory method to create a new instance of

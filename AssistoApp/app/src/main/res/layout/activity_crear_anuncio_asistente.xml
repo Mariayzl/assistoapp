@@ -9,10 +9,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:gravity="center_horizontal"
-        android:paddingVertical="34dp"
-        android:paddingHorizontal="30dp">
+        android:orientation="vertical"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="34dp">
 
         <TextView
             android:id="@+id/tvTituloAsistente2"
@@ -27,19 +27,21 @@
             android:id="@+id/tvCreaAnuncioAsistente1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Crear Anuncio"
             android:ems="30"
             android:paddingVertical="15dp"
+            android:text="Crear anuncio Asistente"
             android:textColor="#2196F3"
             android:textSize="20sp" />
+
         <TextView
             android:id="@+id/tvCreaAnuncioAsistenteInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="En esta ventana podrá crear un anuncio para ofrecer sus servicios orientandos a los cuidados a personas que requieran alguna necesidad o condición especial. "
             android:paddingVertical="3dp"
+            android:text="En esta ventana podrá crear un anuncio para ofrecer sus servicios orientandos a los cuidados a personas que requieran alguna necesidad o condición especial. "
             android:textColor="#3F51B5"
             android:textSize="19sp" />
+
         <TextView
             android:id="@+id/tvCreaAnuncioAsistenteInfo2"
             android:layout_width="wrap_content"
@@ -52,9 +54,9 @@
             android:id="@+id/tvDatosAnuncioAsistente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Datos del anuncio"
             android:ems="30"
             android:paddingVertical="15dp"
+            android:text="Datos del anuncio Asistente"
             android:textColor="#2196F3"
             android:textSize="20sp" />
 
@@ -62,8 +64,8 @@
             android:id="@+id/tvEnunciadoAsistente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enunciado o Título del anuncio"
             android:ems="30"
+            android:text="Enunciado o Título del anuncio"
             android:textColor="#3F51B5" />
 
         <EditText
@@ -71,16 +73,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="30"
+            android:hint="Ej: Cuidados Discapacidad Condicion Fisica de Viernes a Sabado "
             android:inputType="textPersonName"
-            android:hint="Ej: Cuidados de Viernes a Sabado "
             android:textColor="#3F51B5" />
 
         <TextView
             android:id="@+id/tvExperienciaAsistente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Experiencia en cuidado de personas con necesidades especiales"
             android:ems="30"
+            android:text="Experiencia en cuidado de personas con necesidades especiales"
             android:textColor="#3F51B5" />
 
         <EditText
@@ -88,8 +90,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="30"
+            android:hint="Ej: Descripción de experiencia"
             android:inputType="textPersonName"
-            android:hint="Ej: físicas, mixtas, mentales "
             android:textColor="#3F51B5" />
 
         <TextView
@@ -100,13 +102,58 @@
             android:text="Tipos de discapacidad atendidos"
             android:textColor="#3F51B5" />
 
-        <EditText
-            android:id="@+id/etTipoDiscapacidadAsistente"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/check1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="física"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <CheckBox
+                android:id="@+id/check2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="intelectual"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <CheckBox
+                android:id="@+id/check3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="sensorial"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="30"
-            android:hint="..."
-            android:textColor="#3F51B5" />
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/check4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="mixta"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <CheckBox
+                android:id="@+id/check5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="mental"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+
 
         <TextView
             android:id="@+id/tvHorarioAsistente"
@@ -115,6 +162,7 @@
             android:ems="30"
             android:text="Disponibilidad de horarios"
             android:textColor="#3F51B5" />
+
         <EditText
             android:id="@+id/etHorarioAsistente"
             android:layout_width="match_parent"
@@ -130,6 +178,7 @@
             android:ems="30"
             android:text="Referencias laborales"
             android:textColor="#3F51B5" />
+
         <EditText
             android:id="@+id/etReferenciaslaborales"
             android:layout_width="match_parent"
@@ -145,6 +194,7 @@
             android:ems="30"
             android:text="Habilidades relevantes"
             android:textColor="#3F51B5" />
+
         <EditText
             android:id="@+id/etHabilidadesAsistente"
             android:layout_width="match_parent"
@@ -160,6 +210,7 @@
             android:ems="30"
             android:text="Salario y beneficios esperados"
             android:textColor="#3F51B5" />
+
         <EditText
             android:id="@+id/etSalarioAsistente"
             android:layout_width="match_parent"
@@ -175,6 +226,7 @@
             android:ems="30"
             android:text="Contacto"
             android:textColor="#3F51B5" />
+
         <EditText
             android:id="@+id/etContactoAsistente"
             android:layout_width="match_parent"
@@ -190,6 +242,7 @@
             android:ems="30"
             android:text="Ciudad"
             android:textColor="#3F51B5" />
+
         <EditText
             android:id="@+id/etCiudadAsistente"
             android:layout_width="match_parent"
@@ -205,6 +258,7 @@
             android:ems="30"
             android:text="Provincia"
             android:textColor="#3F51B5" />
+
         <EditText
             android:id="@+id/etProvinciaAsistente"
             android:layout_width="match_parent"
@@ -217,9 +271,9 @@
             android:id="@+id/buttonCrearAsistente"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="#00BCD4"
             android:ems="30"
-            android:text="Crear anuncio"
-            android:backgroundTint="#00BCD4"/>
+            android:text="Crear anuncio" />
 
         <Button
             android:id="@+id/buttonCancelarAsistente"

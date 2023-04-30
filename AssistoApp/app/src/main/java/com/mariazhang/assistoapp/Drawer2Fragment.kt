@@ -1,10 +1,12 @@
 package com.mariazhang.assistoapp
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import com.mariazhang.assistoapp.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -36,6 +38,19 @@ class Drawer2Fragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_drawer2, container, false)
+    }
+
+    //Función para botón Crear anuncio asistente
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        super.onViewCreated(view, savedInstanceState)
+
+        val buttonCrearAsistente = view.findViewById<Button>(R.id.buttonCrear1)
+
+        buttonCrearAsistente.setOnClickListener() {
+            val intent = Intent(view.context,CrearAnuncioAsistenteActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     companion object {

@@ -14,11 +14,20 @@ import com.mariazhang.assistoapp.databinding.ActivityLoginBinding
 class CrearAnuncioAsistenteActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityCrearAnuncioAsistenteBinding
+ //   private lateinit var authenti: FirebaseAuth
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(ActivityCrearAnuncioAsistenteBinding.inflate(layoutInflater).also { binding = it }.root)
 
+  //      authenti = FirebaseAuth.getInstance()
+
+/*
+        binding.buttonCrearAsistente.setOnClickListener {
+            val intent = Intent(this, CrearAnuncioCuidadosActivity::class.java)
+            startActivity(intent)
+        }
+*/
     }
 }
