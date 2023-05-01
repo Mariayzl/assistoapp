@@ -3,18 +3,18 @@
 
     <item
         android:id="@+id/drawer1Fragment"
-        android:title="Información del Refugio" />
+        android:title="Ventana Principal" />
 
     <item
         android:id="@+id/drawer2Fragment"
-        android:title="Ayudas S.P.E.C.I.A.L.E.S"/>
+        android:title="Asistentes"/>
 
     <item
         android:id="@+id/drawer3Fragment"
-        android:title="Servoarmaduras"/>
+        android:title="Cuidados"/>
 
     <item
         android:id="@+id/drawer4Fragment"
-        android:title="Señores Mañoso y Agallas"/>
+        android:title="Mis anuncios"/>
 
 </menu>

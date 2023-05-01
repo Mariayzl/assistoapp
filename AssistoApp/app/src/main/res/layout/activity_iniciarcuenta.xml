@@ -6,35 +6,95 @@
     android:layout_height="match_parent"
     tools:context=".IniciarcuentaActivity">
 
-    <EditText
-        android:id="@+id/etmail"
+    <TextView
+        android:id="@+id/tvTitutlo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/etpassword"
+        android:layout_marginTop="20dp"
+        android:text="Iniciar sesión"
+        android:textColor="#07305d"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/tvmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Correo eletrónico"
+        android:textColor="#07305d"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/etmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.159"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etmail"
+        android:layout_width="330dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="ejemplo: mariaz@gmail.com"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/tvpassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/etpassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="330dp"
+        android:layout_height="55dp"
         android:ems="10"
+        android:hint="escriba su contraseña"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/buttonIniciar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etmail" />
+        app:layout_constraintTop_toBottomOf="@+id/tvpassword"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/buttonIniciar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="130dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginBottom="160dp"
         android:text="iniciar"
+        android:backgroundTint="#07305d"
+        android:textColor="#FF9800"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etpassword" />
+
+    <TextView
+        android:id="@+id/tvpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Contraseña"
+        android:textColor="#07305d"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etmail" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo2_2normal" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

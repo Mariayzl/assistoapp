@@ -36,7 +36,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         binding.bLoginAyuda.setOnClickListener {
-            val intent = Intent(this, CrearAnuncioAsistenteActivity::class.java)
+            val intent = Intent(this, AyudaActivity::class.java)
             startActivity(intent)
         }
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#004C69"
+    android:background="#07305d"
     tools:context=".Drawer3Fragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -78,6 +78,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="búsque campo ..."
+        android:background="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/tvFiltrotexto2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

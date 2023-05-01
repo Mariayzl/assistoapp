@@ -7,77 +7,108 @@
     tools:context=".RegisterActivity">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tvmailRegistro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Contraseña"
+        android:layout_marginTop="34dp"
+        android:text="Correo eletrónico"
+        android:textColor="#07305d"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
-
-    <EditText
-        android:id="@+id/etpassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:hint="contraseña"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Email"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.159"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvRegistro" />
 
     <EditText
         android:id="@+id/etEmail"
-        android:layout_width="289dp"
-        android:layout_height="39dp"
+        android:layout_width="330dp"
+        android:layout_height="56dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="ejemplo: mariaz@gmail.com"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <TextView
-        android:id="@+id/tvRegistro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="168dp"
-        android:text="REGISTRO"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/buttonVolver"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="72dp"
-        android:text="volver"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonCrear"
-        app:layout_constraintTop_toBottomOf="@+id/etpassword" />
+        app:layout_constraintTop_toBottomOf="@+id/tvmailRegistro" />
 
     <Button
         android:id="@+id/buttonCrear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="53dp"
+        android:backgroundTint="#07305d"
         android:text="crear"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonVolver"
-        app:layout_constraintHorizontal_bias="0.445"
+        android:textColor="#FF9800"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonVolver"
+        app:layout_constraintTop_toBottomOf="@+id/etpasswordRegistro" />
+
+    <Button
+        android:id="@+id/buttonVolver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="53dp"
+        android:backgroundTint="#07305d"
+        android:text="volver"
+        android:textColor="#FF9800"
+        app:layout_constraintEnd_toStartOf="@+id/buttonCrear"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etpassword"
-        app:layout_constraintVertical_bias="0.501" />
+        app:layout_constraintTop_toBottomOf="@+id/etpasswordRegistro" />
+
+    <TextView
+        android:id="@+id/tvpasswordRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Contraseña"
+        android:textColor="#07305d"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+    <EditText
+        android:id="@+id/etpasswordRegistro"
+        android:layout_width="330dp"
+        android:layout_height="56dp"
+        android:ems="10"
+        android:hint="escriba su contraseña"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvpasswordRegistro" />
+
+    <TextView
+        android:id="@+id/tvRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="REGISTRO"
+        android:textColor="#07305d"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo2_2normal" />
+
+    <TextView
+        android:id="@+id/tvInfo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Assisto,Juntos por un bienestar compartido"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonVolver" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,7 +17,7 @@
     </style>
 
     <style name="Theme.MySplashScreen" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">#FFC107</item>
+        <item name="windowSplashScreenBackground">#0b488c</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/logo1</item>
         <item name="postSplashScreenTheme">@style/Theme.AssistoApp</item>
     </style>

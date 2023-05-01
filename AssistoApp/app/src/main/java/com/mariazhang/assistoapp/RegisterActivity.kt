@@ -21,38 +21,46 @@ class RegisterActivity : AppCompatActivity() {
 
         authenti = FirebaseAuth.getInstance()
 
+        //Botón crear/registrar usuario
         binding.buttonCrear.setOnClickListener {
 
             val email = binding.etEmail.text.toString()
-            val password = binding.etpassword.text.toString()
+            val password = binding.etpasswordRegistro.text.toString()
 
-                    authenti.createUserWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(this) { task ->
-                            if (task.isSuccessful) {
-                                authenti.signInWithEmailAndPassword(email, password)
-                                    .addOnCompleteListener(this) { task ->
-                                        if (task.isSuccessful) {
-                                            val intent = Intent(this, MainActivity::class.java)
-                                            startActivity(intent)
-                                        } else {
-                                            Toast.makeText(
-                                                this,
-                                                "Ha habido un problema conectando al servidor",
-                                                Toast.LENGTH_SHORT
-                                            ).show()
-                                        }
-                                    }
-                            } else {
-                                //
-                                Toast.makeText(
-                                    this,
-                                    "Error en el formato del correo o contraseña invalida" ,
-                                    Toast.LENGTH_SHORT
-                                ).show()
+            authenti.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+                        authenti.signInWithEmailAndPassword(email, password)
+                            .addOnCompleteListener(this) { task ->
+                                if (task.isSuccessful) {
+                                    val intent = Intent(this, MainActivity::class.java)
+                                    startActivity(intent)
+                                } else {
+                                    Toast.makeText(
+                                        this,
+                                        "Ha habido un problema conectando al servidor",
+                                        Toast.LENGTH_SHORT
+                                    ).show()
+                                }
                             }
-                        }
+                    } else {
+                        //
+                        Toast.makeText(
+                            this,
+                            "Error en el formato del correo o contraseña invalida",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
                 }
-
         }
 
+        //Botón Volver
+        binding.buttonVolver.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
+
+
     }
+
+}

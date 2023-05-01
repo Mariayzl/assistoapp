@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#3F51B5"
+
+    android:background="#07305d"
     android:gravity="center"
     android:orientation="vertical">
 
@@ -20,5 +21,5 @@
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
         android:text="Juntos por un bienestar compartido"
-        android:textColor="#FFC107"/>
+        android:textColor="@color/white"/>
 </LinearLayout>

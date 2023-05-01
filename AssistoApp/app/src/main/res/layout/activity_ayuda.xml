@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AyudaActivity">
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/tvinfoAyuda1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo2_2normal" />
+
+    <TextView
+        android:id="@+id/tvinfoAyuda1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="17dp"
+        android:text="¡Bienvenido a Assisto!"
+        android:textColor="#07305d"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvinfoAyuda2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+    <TextView
+        android:id="@+id/tvinfoAyuda2"
+        android:layout_width="362dp"
+        android:layout_height="241dp"
+        android:justificationMode="inter_word"
+        android:text="Nuestra aplicación móvil está diseñada para conectar a personas que necesitan cuidados especiales debido a una condición especial o discapacidad, con asistentes que buscan trabajo cuidando a estas personas.\n\nAssisto es una plataforma segura y confiable que facilita la búsqueda y selección de asistentes de cuidado, lo que te permite encontrar el apoyo que necesitas para ti o para tus seres queridos. Con Assisto, puedes disfrutar de la tranquilidad de saber que estás obteniendo atención personalizada y de calidad.\n\n¡Entra en Assisto hoy y comienza a conectar con asistentes de cuidado confiables en tu área!"
+        android:textColor="#07305d"
+        app:layout_constraintBottom_toTopOf="@+id/tvinfoAyuda3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvinfoAyuda1" />
+
+    <TextView
+        android:id="@+id/tvinfoAyuda3"
+        android:layout_width="302dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="29dp"
+        android:paddingHorizontal="5dp"
+        android:background="#07305d"
+        android:text="Contacto: 666335522 \n\nCorreo electrónico: ayuda@assisto.es"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCorreoAyuda"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvinfoAyuda2" />
+
+    <Button
+        android:id="@+id/buttonCorreoAyuda"
+        android:layout_width="183dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="#07305d"
+        android:text="asistente de correo"
+        android:textColor="#FF9800"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonVolverAyuda" />
+
+    <Button
+        android:id="@+id/buttonVolverAyuda"
+        android:layout_width="92dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="#07305d"
+        android:text="volver"
+        android:textColor="#FF9800"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonCorreoAyuda"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
