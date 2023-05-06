@@ -5,6 +5,7 @@ import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.animation.AnticipateInterpolator
 import android.view.animation.DecelerateInterpolator
@@ -14,6 +15,8 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import com.mariazhang.assistoapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -30,24 +33,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(ActivityMainBinding.inflate(layoutInflater).also { binding = it }.root)
         setSupportActionBar(binding.toolbar)
 
-//codigoo 1
-
-        /*
-        val db = Firebase.firestore
-        db.collection("usuarios")
-
-            .get()
-            .addOnSuccessListener { documents ->
-                for (document in documents) {
-                    Log.i("MANOLOO", "${document.id} => ${document.data}")
-                }
-            }
-            .addOnFailureListener { exception ->
-                Log.i("MANOLOOo", "Error getting documents: ", exception)
-            }
-            */
-
-//codigoo 1.
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
@@ -59,6 +44,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.drawer2Fragment,
                 R.id.drawer3Fragment,
                 R.id.drawer4Fragment,
+                R.id.perfilActivity
 
                 ),
             binding.drawerLayout

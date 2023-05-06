@@ -17,4 +17,8 @@
         android:id="@+id/drawer4Fragment"
         android:title="Mis anuncios"/>
 
+    <item
+        android:id="@+id/perfilActivity"
+        android:title="Mi Perfil"/>
+
 </menu>

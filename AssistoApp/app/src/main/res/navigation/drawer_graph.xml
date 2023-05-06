@@ -25,4 +25,9 @@
         android:name="com.mariazhang.assistoapp.Drawer4Fragment"
         android:label="fragment_drawer4"
         tools:layout="@layout/fragment_drawer4" />
+    <activity
+        android:id="@+id/perfilActivity"
+        android:name="com.mariazhang.assistoapp.PerfilActivity"
+        android:label="activity_perfil"
+        tools:layout="@layout/activity_perfil" />
 </navigation>
