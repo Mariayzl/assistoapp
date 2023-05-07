@@ -60,6 +60,8 @@ class CrearAnuncioAsistenteActivity : AppCompatActivity() {
             datos_anuncio_asistente["experiencia "] = binding.etExperienciaAsistente.text.toString()
             datos_anuncio_asistente["exp_tipo_discapacidad"] = exp_tipo_discapacidad
             datos_anuncio_asistente["disponibilidad"] = binding.etHorarioAsistente.text.toString()
+            datos_anuncio_asistente["habilidades"] = binding.etHabilidadesAsistente.text.toString()
+            datos_anuncio_asistente["salario"] = binding.etSalarioAsistente.text.toString()
             datos_anuncio_asistente["contacto"] = binding.etContactoAsistente.text.toString()
             datos_anuncio_asistente["ciudad"] = binding.etCiudadAsistente.text.toString()
             datos_anuncio_asistente["provincia"] = binding.etProvinciaAsistente.text.toString()

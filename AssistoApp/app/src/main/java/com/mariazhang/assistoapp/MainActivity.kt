@@ -33,6 +33,24 @@ class MainActivity : AppCompatActivity() {
         setContentView(ActivityMainBinding.inflate(layoutInflater).also { binding = it }.root)
         setSupportActionBar(binding.toolbar)
 
+//codigoo 1
+
+/*
+        val db = Firebase.firestore
+        db.collection("anuncio_asistente")
+
+            .get()
+            .addOnSuccessListener { documents ->
+                for (document in documents) {
+                    Log.i("MANOLOO", "${document.id} => ${document.data}")
+                }
+            }
+            .addOnFailureListener { exception ->
+                Log.i("MANOLOOo", "Error getting documents: ", exception)
+            }
+*/
+
+//codigoo 1.
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
@@ -44,7 +62,6 @@ class MainActivity : AppCompatActivity() {
                 R.id.drawer2Fragment,
                 R.id.drawer3Fragment,
                 R.id.drawer4Fragment,
-                R.id.perfilActivity
 
                 ),
             binding.drawerLayout
