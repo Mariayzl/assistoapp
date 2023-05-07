@@ -9,16 +9,16 @@ import java.util.Objects
 class anuncio_asistentes(
 
     var anuncio_asistente_id: String,
-    var enunciado: String?,
-    var experiencia: String?,
+    var email: String,
+    var enunciado: String,
+    var experiencia: String,
     var exp_tipo_discapacidad: List<Boolean>,
-    var disponibilidad: String?,
-    var referencias: String?,
-    var habilidades: String?,
-    var salario: String?,
-    var contacto: String?,
-    var ciudad: String?,
-    var provincia: String?
+    var disponibilidad: String,
+    var habilidades: String,
+    var salario: String,
+    var contacto: String,
+    var ciudad: String,
+    var provincia: String
 ) {
 
     companion object {
@@ -32,7 +32,7 @@ class anuncio_asistentes(
 
             var listaAnuncios: MutableList<anuncio_asistentes> = mutableListOf()
 
-            firestore.collection("anuncio_asistentes").whereEqualTo("email", user.email).get()
+            firestore.collection("anuncio_asistente").whereEqualTo("email", user.email).get()
                 .addOnSuccessListener { documents ->
 
                     for (document in documents) {
@@ -53,15 +53,15 @@ class anuncio_asistentes(
 
         fun fromJson(anuncioMapa: MutableMap<String, Any>): anuncio_asistentes {
 
-            var lista = anuncioMapa["exp_tipo_discapacidad"] as List<Boolean>
+            var exp_tipo_discapacidad = anuncioMapa["exp_tipo_discapacidad"] as List<Boolean>
 
             return anuncio_asistentes(
                 anuncioMapa["anuncio_asistente_id"].toString(),
+                anuncioMapa["email"].toString(),
                 anuncioMapa["enunciado"].toString(),
                 anuncioMapa["experiencia"].toString(),
-                lista ,
+                exp_tipo_discapacidad ,
                 anuncioMapa["disponibilidad"].toString(),
-                anuncioMapa["referencias"].toString(),
                 anuncioMapa["habilidades"].toString(),
                 anuncioMapa["salario"].toString(),
                 anuncioMapa["contacto"].toString(),

@@ -8,26 +8,26 @@
     <fragment
         android:id="@+id/drawer1Fragment"
         android:name="com.mariazhang.assistoapp.Drawer1Fragment"
-        android:label="fragment_drawer1w"
+        android:label="Ventana principal Assisto"
         tools:layout="@layout/fragment_drawer1" />
     <fragment
         android:id="@+id/drawer2Fragment"
         android:name="com.mariazhang.assistoapp.Drawer2Fragment"
-        android:label="fragment_drawer2"
+        android:label="Ventana Asistente"
         tools:layout="@layout/fragment_drawer2" />
     <fragment
         android:id="@+id/drawer3Fragment"
         android:name="com.mariazhang.assistoapp.Drawer3Fragment"
-        android:label="fragment_drawer3"
+        android:label="Ventana Cuidados"
         tools:layout="@layout/fragment_drawer3" />
     <fragment
         android:id="@+id/drawer4Fragment"
         android:name="com.mariazhang.assistoapp.Drawer4Fragment"
-        android:label="fragment_drawer4"
+        android:label="Ventana Mis Anuncios"
         tools:layout="@layout/fragment_drawer4" />
     <activity
         android:id="@+id/perfilActivity"
         android:name="com.mariazhang.assistoapp.PerfilActivity"
-        android:label="activity_perfil"
+        android:label="Mi Perfil"
         tools:layout="@layout/activity_perfil" />
 </navigation>

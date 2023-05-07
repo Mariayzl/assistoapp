@@ -54,13 +54,18 @@ class Drawer4Fragment : Fragment() {
         listener = null
     }
 
-
+/*
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
         val view = inflater.inflate(R.layout.fragment_drawer4, container, false)
+
+        // Agregar el siguiente código después del bloque if (view is RecyclerView)
+        val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerviewMisanuncios)
+        recyclerView.adapter = RecyclerViewAdapter(anuncio_asistentes.getAnuncios(), listener)
+
          if (view is RecyclerView) {
 
              with(view){
@@ -77,6 +82,33 @@ class Drawer4Fragment : Fragment() {
 
         return view
     }
+*/
+override fun onCreateView(
+    inflater: LayoutInflater, container: ViewGroup?,
+    savedInstanceState: Bundle?
+): View? {
+
+    if (listener != null) {
+        val recyclerView = view?.findViewById<RecyclerView>(R.id.recyclerviewMisanuncios)
+        if (recyclerView != null) {
+            recyclerView.adapter = RecyclerViewAdapter(anuncio_asistentes.getAnuncios(), listener)
+        }
+    }
+
+    val view = inflater.inflate(R.layout.fragment_drawer4, container, false)
+    val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerviewMisanuncios)
+
+    recyclerView.layoutManager = when {
+        columnCount <= 1 -> LinearLayoutManager(context)
+        else -> GridLayoutManager(context, columnCount)
+    }
+
+    recyclerView.adapter = RecyclerViewAdapter(anuncio_asistentes.getAnuncios(), listener)
+
+    return view
+}
+
+
 
     companion object {
 

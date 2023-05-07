@@ -62,6 +62,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.drawer2Fragment,
                 R.id.drawer3Fragment,
                 R.id.drawer4Fragment,
+                R.id.perfilActivity
 
                 ),
             binding.drawerLayout
@@ -80,14 +81,14 @@ class MainActivity : AppCompatActivity() {
                 splashScreenView.view.width.toFloat()
             ).apply {
                 interpolator = DecelerateInterpolator()
-                duration = 500
+                duration = 1500
                 doOnEnd { splashScreenView.remove() }
             }
 
             val icon = splashScreenView.iconView
             val iconAnimator = ValueAnimator
                 .ofInt(icon.height, 0)
-                .setDuration(1000)
+                .setDuration(2000)
 
             iconAnimator.addUpdateListener {
                 val value = it.animatedValue as Int
