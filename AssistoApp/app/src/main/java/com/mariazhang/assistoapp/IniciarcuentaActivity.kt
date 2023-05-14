@@ -33,7 +33,7 @@ class IniciarcuentaActivity : AppCompatActivity() {
                     if (task.isSuccessful) {
 
                         print(task)
-                        Log.i("weeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", task.toString())
+                        Log.i("weeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerror", task.toString())
 
                         var usuariologin = this?.getSharedPreferences("login", MODE_PRIVATE)
                         val intent = Intent(this, MainActivity::class.java)

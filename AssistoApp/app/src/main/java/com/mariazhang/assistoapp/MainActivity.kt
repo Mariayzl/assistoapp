@@ -3,6 +3,7 @@ package com.mariazhang.assistoapp
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -17,9 +18,11 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import com.mariazhang.assistoapp.database.anuncio_asistentes
 import com.mariazhang.assistoapp.databinding.ActivityMainBinding
+import com.mariazhang.assistoapp.interfaces.OnItemClickAsistentes
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), OnItemClickAsistentes {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var appBarConfiguration: AppBarConfiguration
@@ -106,6 +109,20 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+
     }
+    override fun onItemClick(anuncioAsistente: anuncio_asistentes) {
+
+        println("clickeadoooo clickeadooo clickeadooo clickeadooo")
+
+        val intent = Intent(this, ModificarAnuncioAsistenteActivity::class.java)
+
+        intent.putExtra("anuncioAsistente",anuncioAsistente)
+
+        startActivity(intent)
+
+    }
+
+
 
 }

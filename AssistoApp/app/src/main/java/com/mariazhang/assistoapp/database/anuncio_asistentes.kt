@@ -1,12 +1,14 @@
 package com.mariazhang.assistoapp.database
 
+import android.os.Parcel
+import android.os.Parcelable
 import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import java.util.Objects
 
 
-class anuncio_asistentes(
+data class anuncio_asistentes(
 
     var anuncio_asistente_id: String,
     var email: String,
@@ -19,37 +21,48 @@ class anuncio_asistentes(
     var contacto: String,
     var ciudad: String,
     var provincia: String
-) {
 
-    companion object {
 
-        fun getAnuncios(): MutableList<anuncio_asistentes> {
 
-            val authenti = FirebaseAuth.getInstance()
-            val user = authenti.currentUser!!
+):Parcelable {
+    constructor(parcel: Parcel) : this(
+        parcel.readString()!!,
+        parcel.readString()!!,
+        parcel.readString()!!,
+        parcel.readString()!!,
+        parcel.createBooleanArray()?.toList() ?: emptyList(),
+        parcel.readString()!!,
+        parcel.readString()!!,
+        parcel.readString()!!,
+        parcel.readString()!!,
+        parcel.readString()!!,
+        parcel.readString()!!
+    )
 
-            val firestore = FirebaseFirestore.getInstance()
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeString(anuncio_asistente_id)
+        parcel.writeString(email)
+        parcel.writeString(enunciado)
+        parcel.writeString(experiencia)
+        //falta aqui ???
+    //    parcel.writeString(exp_tipo_discapacidad.toString())
+        parcel.writeString(disponibilidad)
+        parcel.writeString(habilidades)
+        parcel.writeString(salario)
+        parcel.writeString(contacto)
+        parcel.writeString(ciudad)
+        parcel.writeString(provincia)
+    }
 
-            var listaAnuncios: MutableList<anuncio_asistentes> = mutableListOf()
+    override fun describeContents(): Int {
+        return 0
+    }
 
-            firestore.collection("anuncio_asistente").whereEqualTo("email", user.email).get()
-                .addOnSuccessListener { documents ->
 
-                    for (document in documents) {
 
-                        var anuncio =
 
-                            listaAnuncios.add(fromJson(document.data))
-                    }
+    companion object CREATOR : Parcelable.Creator<anuncio_asistentes> {
 
-                }
-
-                .addOnFailureListener { exception ->
-                    Log.i("MANOLOOo", "Error getting documents: ", exception)
-                }
-
-            return listaAnuncios
-        }
 
         fun fromJson(anuncioMapa: MutableMap<String, Any>): anuncio_asistentes {
 
@@ -70,9 +83,16 @@ class anuncio_asistentes(
             )
         }
 
+        override fun createFromParcel(parcel: Parcel): anuncio_asistentes {
+            return anuncio_asistentes(parcel)
+        }
+
+        override fun newArray(size: Int): Array<anuncio_asistentes?> {
+            return arrayOfNulls(size)
+        }
+
+
     }
 
+
 }
-
-
-

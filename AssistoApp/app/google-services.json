@@ -7,9 +7,38 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:514023638995:android:bb33fddb199c4a5f9f9126",
+        "mobilesdk_app_id": "1:514023638995:android:a23d2eaf0ef81d7e9f9126",
         "android_client_info": {
           "package_name": "com.mariazhang.assistoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "514023638995-0vicm5bt4pu7pj20u8ejv177diu1tflt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBppqQbWrR8ysvgmJ_OvTpnZ5VNPQmctAo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "514023638995-0vicm5bt4pu7pj20u8ejv177diu1tflt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:514023638995:android:bb33fddb199c4a5f9f9126",
+        "android_client_info": {
+          "package_name": "com.project.assisto"
         }
       },
       "oauth_client": [

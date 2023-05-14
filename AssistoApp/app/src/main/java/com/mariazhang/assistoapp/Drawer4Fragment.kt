@@ -2,13 +2,17 @@ package com.mariazhang.assistoapp
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import com.mariazhang.assistoapp.adapters.RecyclerViewAdapter
 import com.mariazhang.assistoapp.database.anuncio_asistentes
 import com.mariazhang.assistoapp.interfaces.OnItemClickAsistentes
@@ -26,7 +30,7 @@ private const val ARG_PARAM2 = "param2"
 
 
 
-class Drawer4Fragment : Fragment() {
+class Drawer4Fragment : Fragment(){
 
    var listener : OnItemClickAsistentes ? = null
 
@@ -62,7 +66,6 @@ class Drawer4Fragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_drawer4, container, false)
 
-        // Agregar el siguiente código después del bloque if (view is RecyclerView)
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerviewMisanuncios)
         recyclerView.adapter = RecyclerViewAdapter(anuncio_asistentes.getAnuncios(), listener)
 
@@ -83,31 +86,51 @@ class Drawer4Fragment : Fragment() {
         return view
     }
 */
+
 override fun onCreateView(
     inflater: LayoutInflater, container: ViewGroup?,
     savedInstanceState: Bundle?
+
 ): View? {
 
-    if (listener != null) {
-        val recyclerView = view?.findViewById<RecyclerView>(R.id.recyclerviewMisanuncios)
-        if (recyclerView != null) {
-            recyclerView.adapter = RecyclerViewAdapter(anuncio_asistentes.getAnuncios(), listener)
-        }
-    }
 
     val view = inflater.inflate(R.layout.fragment_drawer4, container, false)
-    val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerviewMisanuncios)
 
-    recyclerView.layoutManager = when {
-        columnCount <= 1 -> LinearLayoutManager(context)
-        else -> GridLayoutManager(context, columnCount)
-    }
+    val authenti = FirebaseAuth.getInstance()
+    val user = authenti.currentUser!!
 
-    recyclerView.adapter = RecyclerViewAdapter(anuncio_asistentes.getAnuncios(), listener)
+    val firestore = FirebaseFirestore.getInstance()
+
+    var listaAnuncios: MutableList<anuncio_asistentes> = mutableListOf()
+
+    firestore.collection("anuncio_asistente").whereEqualTo("email", user.email).get()
+        .addOnSuccessListener { documents ->
+
+            for (document in documents) {
+
+                listaAnuncios.add(anuncio_asistentes.fromJson(document.data))
+
+            }
+
+            val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerviewMisanuncios)
+
+            recyclerView.layoutManager = when {
+                columnCount <= 1 -> LinearLayoutManager(context)
+                else -> GridLayoutManager(context, columnCount)
+            }
+
+            recyclerView.adapter = RecyclerViewAdapter(listaAnuncios, listener)
+
+            println(listaAnuncios.size.toString() + "FORRRR FOOOR FOOOR FOOOR---")
+
+        }
+
+        .addOnFailureListener { exception ->
+            Log.i("Weeeeeeeeeeeee", "Error getting documents: ", exception)
+        }
 
     return view
 }
-
 
 
     companion object {
@@ -122,4 +145,6 @@ override fun onCreateView(
                 }
             }
     }
+
+
 }

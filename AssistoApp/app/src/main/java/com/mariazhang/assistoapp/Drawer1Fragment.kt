@@ -41,20 +41,36 @@ class Drawer1Fragment : Fragment() {
         return inflater.inflate(R.layout.fragment_drawer1, container, false)
     }
 
-    //*****Codigo antiguo botón
+
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         super.onViewCreated(view, savedInstanceState)
 
-        val buttonUbicacion = view.findViewById<Button>(R.id.buttonAsistente)
+        val buttonAsistente = view.findViewById<Button>(R.id.buttonAsistente)
+        val buttonCuidados = view.findViewById<Button>(R.id.buttonCuidados)
+        val buttonMiPerfil = view.findViewById<Button>(R.id.buttonMiperfil)
 
-        buttonUbicacion.setOnClickListener() {
-            val intent = Intent(view.context,BottomActivity2::class.java)
+
+        buttonAsistente.setOnClickListener() {
+            val intent = Intent(view.context,CrearAnuncioAsistenteActivity::class.java)
             startActivity(intent)
         }
+
+        buttonCuidados.setOnClickListener() {
+            val intent = Intent(view.context,CrearAnuncioCuidadosActivity::class.java)
+            startActivity(intent)
+        }
+
+        buttonMiPerfil.setOnClickListener() {
+            val intent = Intent(view.context,Drawer4Fragment::class.java)
+            startActivity(intent)
+        }
+
+
+
     }
-
-
 
     companion object {
         /**
