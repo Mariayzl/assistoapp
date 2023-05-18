@@ -89,7 +89,7 @@
         android:layout_width="399dp"
         android:layout_height="311dp"
         android:layout_marginTop="8dp"
-        android:background="@color/white"
+        android:background="#07305d"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvFiltrotexto2" />

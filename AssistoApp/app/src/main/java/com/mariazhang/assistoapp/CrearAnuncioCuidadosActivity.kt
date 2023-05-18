@@ -1,5 +1,6 @@
 package com.mariazhang.assistoapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.firebase.auth.FirebaseAuth
@@ -14,6 +15,10 @@ class CrearAnuncioCuidadosActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCrearAnuncioCuidadosBinding
     private lateinit var authenti: FirebaseAuth
 
+    override fun onBackPressed() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -27,6 +32,7 @@ class CrearAnuncioCuidadosActivity : AppCompatActivity() {
         binding.buttonCrearCuidados.setOnClickListener{
 
             binding.buttonCrearCuidados.isEnabled = false
+            binding.buttonBorrarCuidados.isEnabled = false
 
             val tipo_discapacidad = listOf(
                 binding.check1.isChecked,
@@ -65,13 +71,13 @@ class CrearAnuncioCuidadosActivity : AppCompatActivity() {
                 HashMap()
 
             datos_anuncio_cuidados["mail"] = authenti.currentUser?.email.toString()
-            datos_anuncio_cuidados["anuncio_asistente_id"] = UUID.randomUUID().toString()
+            datos_anuncio_cuidados["anuncio_cuidados_id"] = UUID.randomUUID().toString()
             datos_anuncio_cuidados["enunciado"] = binding.etEnunciadoCuidados.text.toString()
-            datos_anuncio_cuidados["descripcion "] = binding.etDescripcion.text.toString()
-            datos_anuncio_cuidados["grado_discapacidad "] = binding.etGradodiscapacidad.text.toString()
-            datos_anuncio_cuidados["tipo_discapacidad "] = tipo_discapacidad
-            datos_anuncio_cuidados["discapacidades "] = discapacidades
-            datos_anuncio_cuidados["necesidades "] = necesidades
+            datos_anuncio_cuidados["descripcion"] = binding.etDescripcion.text.toString()
+            datos_anuncio_cuidados["grado_discapacidad"] = binding.etGradodiscapacidad.text.toString()
+            datos_anuncio_cuidados["tipo_discapacidad"] = tipo_discapacidad
+            datos_anuncio_cuidados["discapacidades"] = discapacidades
+            datos_anuncio_cuidados["necesidades"] = necesidades
             datos_anuncio_cuidados["tipo_jornada"] = binding.etJornadaCuidados.text.toString()
             datos_anuncio_cuidados["salario"] = binding.etSalarioCuidados.text.toString()
             datos_anuncio_cuidados["contacto"] = binding.etContactoCuidados.text.toString()
@@ -80,6 +86,9 @@ class CrearAnuncioCuidadosActivity : AppCompatActivity() {
 
             firestore.collection("anuncio_cuidados")
                 .add(datos_anuncio_cuidados)
+
+            binding.buttonCrearCuidados.isEnabled = true
+            binding.buttonBorrarCuidados.isEnabled = true
 
         }
 

@@ -18,6 +18,10 @@
         android:title="Mis anuncios"/>
 
     <item
+        android:id="@+id/drawer5Fragment"
+        android:title="Mis anuncios cuidados"/>
+
+    <item
         android:id="@+id/perfilActivity"
         android:title="Mi Perfil"/>
 

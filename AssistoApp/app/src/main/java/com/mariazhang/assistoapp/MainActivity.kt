@@ -3,6 +3,7 @@ package com.mariazhang.assistoapp
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -19,39 +20,26 @@ import androidx.navigation.ui.NavigationUI
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.mariazhang.assistoapp.database.anuncio_asistentes
+import com.mariazhang.assistoapp.database.anuncio_cuidados
 import com.mariazhang.assistoapp.databinding.ActivityMainBinding
 import com.mariazhang.assistoapp.interfaces.OnItemClickAsistentes
+import com.mariazhang.assistoapp.interfaces.OnItemClickCuidados
 
-class MainActivity : AppCompatActivity(), OnItemClickAsistentes {
+class MainActivity : AppCompatActivity(), OnItemClickAsistentes,OnItemClickCuidados {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var appBarConfiguration: AppBarConfiguration
 
+    override fun onBackPressed() {}
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
-        val screenSplash = installSplashScreen()
+
 
         super.onCreate(savedInstanceState)
 
         setContentView(ActivityMainBinding.inflate(layoutInflater).also { binding = it }.root)
         setSupportActionBar(binding.toolbar)
-
-//codigoo 1
-
-/*
-        val db = Firebase.firestore
-        db.collection("anuncio_asistente")
-
-            .get()
-            .addOnSuccessListener { documents ->
-                for (document in documents) {
-                    Log.i("MANOLOO", "${document.id} => ${document.data}")
-                }
-            }
-            .addOnFailureListener { exception ->
-                Log.i("MANOLOOo", "Error getting documents: ", exception)
-            }
-*/
 
 //codigoo 1.
 
@@ -65,6 +53,7 @@ class MainActivity : AppCompatActivity(), OnItemClickAsistentes {
                 R.id.drawer2Fragment,
                 R.id.drawer3Fragment,
                 R.id.drawer4Fragment,
+                R.id.drawer5Fragment,
                 R.id.perfilActivity
 
                 ),
@@ -73,56 +62,47 @@ class MainActivity : AppCompatActivity(), OnItemClickAsistentes {
         NavigationUI.setupWithNavController(binding.navView, navController)
         NavigationUI.setupWithNavController(binding.toolbar, navController, appBarConfiguration)
 
-        Thread.sleep(1000)
-        screenSplash.setKeepOnScreenCondition { false }
-
-        screenSplash.setOnExitAnimationListener { splashScreenView ->
-            val slideBack = ObjectAnimator.ofFloat(
-                splashScreenView.view,
-                View.TRANSLATION_Y,
-                0f,
-                splashScreenView.view.width.toFloat()
-            ).apply {
-                interpolator = DecelerateInterpolator()
-                duration = 1500
-                doOnEnd { splashScreenView.remove() }
-            }
-
-            val icon = splashScreenView.iconView
-            val iconAnimator = ValueAnimator
-                .ofInt(icon.height, 0)
-                .setDuration(2000)
-
-            iconAnimator.addUpdateListener {
-                val value = it.animatedValue as Int
-                icon.layoutParams.width = value
-                icon.layoutParams.height = value
-                icon.requestLayout()
-                if (value == 0) slideBack.start()
-            }
-
-            AnimatorSet().apply {
-                interpolator = AnticipateInterpolator(5f)
-                play(iconAnimator)
-                start()
-            }
-
-        }
-
-
     }
     override fun onItemClick(anuncioAsistente: anuncio_asistentes) {
 
-        println("clickeadoooo clickeadooo clickeadooo clickeadooo")
+        val sharedPrefs = getSharedPreferences("vistaSuperficial", Context.MODE_PRIVATE)
+        val isChecked = sharedPrefs.getBoolean("check", true)
 
-        val intent = Intent(this, ModificarAnuncioAsistenteActivity::class.java)
+        if (isChecked){
+            val intent = Intent(this, VerAnuncioAsistenteActivity::class.java)
 
-        intent.putExtra("anuncioAsistente",anuncioAsistente)
+            intent.putExtra("ID", anuncioAsistente.anuncio_asistente_id)
+            startActivity(intent)
+        }else{
+            val intent = Intent(this, ModificarAnuncioAsistenteActivity::class.java)
 
-        startActivity(intent)
+            intent.putExtra("ID", anuncioAsistente.anuncio_asistente_id)
+            startActivity(intent)
+        }
+
+
 
     }
 
+    override fun onItemClick(anuncioCuidados: anuncio_cuidados) {
+
+        val sharedPrefs = getSharedPreferences("vistaSuperficial", Context.MODE_PRIVATE)
+        val isChecked = sharedPrefs.getBoolean("check", true)
+
+        if (isChecked){
+            val intent = Intent(this, VerAnuncioCuidadosActivity::class.java)
+
+            intent.putExtra("ID", anuncioCuidados.anuncio_cuidado_id)
+            startActivity(intent)
+
+        }else{
+            val intent = Intent(this, ModificarAnuncioCuidadosActivity::class.java)
+
+            intent.putExtra("ID", anuncioCuidados.anuncio_cuidado_id)
+            startActivity(intent)
+        }
 
 
+
+    }
 }

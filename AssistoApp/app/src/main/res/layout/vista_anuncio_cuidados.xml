@@ -20,26 +20,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
+            android:gravity="center"
             android:text="Enunciado"
             android:textSize="20sp"
-            android:gravity="center"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/tvExperiencia"
+            app:layout_constraintBottom_toTopOf="@+id/tvGradodiscapacidad"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvCiudad" />
 
         <TextView
-            android:id="@+id/tvDisponibilidad"
+            android:id="@+id/tvTipoJornada"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Disponibilidad"
+            android:text="Tipo jornada"
             android:textSize="15sp"
             app:layout_constraintBottom_toTopOf="@+id/tvSalario"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvExperiencia" />
+            app:layout_constraintTop_toBottomOf="@+id/tvGradodiscapacidad" />
 
         <TextView
             android:id="@+id/tvSalario"
@@ -53,18 +53,18 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvDisponibilidad" />
+            app:layout_constraintTop_toBottomOf="@+id/tvTipoJornada" />
 
         <TextView
-            android:id="@+id/tvExperiencia"
+            android:id="@+id/tvGradodiscapacidad"
             android:layout_width="83dp"
             android:layout_height="34dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:text="Experiencia"
+            android:text="Grado de discapacidad"
             android:gravity="center"
             android:textStyle="italic"
-            app:layout_constraintBottom_toTopOf="@+id/tvDisponibilidad"
+            app:layout_constraintBottom_toTopOf="@+id/tvTipoJornada"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvEnunciado" />
@@ -98,23 +98,23 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Disponibilidad:"
+            android:text="Tipo jornada"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/tvDisponibilidad"
-            app:layout_constraintEnd_toStartOf="@+id/tvDisponibilidad"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTipoJornada"
+            app:layout_constraintEnd_toStartOf="@+id/tvTipoJornada"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/tvDisponibilidad" />
+            app:layout_constraintTop_toTopOf="@+id/tvTipoJornada" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Experiencia:"
+            android:text="Grado discapacidad:"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/tvExperiencia"
-            app:layout_constraintEnd_toStartOf="@+id/tvExperiencia"
+            app:layout_constraintBottom_toBottomOf="@+id/tvGradodiscapacidad"
+            app:layout_constraintEnd_toStartOf="@+id/tvGradodiscapacidad"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/tvExperiencia" />
+            app:layout_constraintTop_toTopOf="@+id/tvGradodiscapacidad" />
 
         <TextView
             android:id="@+id/textView2"

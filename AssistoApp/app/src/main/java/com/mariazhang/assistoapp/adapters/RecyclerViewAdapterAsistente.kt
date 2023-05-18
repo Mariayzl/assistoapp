@@ -4,23 +4,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-import android.widget.ImageView
 import android.widget.TextView
 
 import androidx.recyclerview.widget.RecyclerView
-import com.mariazhang.assistoapp.Drawer4Fragment
 import com.mariazhang.assistoapp.database.anuncio_asistentes
-import com.mariazhang.assistoapp.databinding.FragmentDrawer4Binding
+import com.mariazhang.assistoapp.database.anuncio_cuidados
 import com.mariazhang.assistoapp.databinding.VistaAnuncioAsisBinding
 import com.mariazhang.assistoapp.interfaces.OnItemClickAsistentes
 
 
-class RecyclerViewAdapter(
+class RecyclerViewAdapterAsistente(
 
     private val anuncioAsistenteLista: List<anuncio_asistentes>,
     private val listener: OnItemClickAsistentes?
     
-) : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
+) : RecyclerView.Adapter<RecyclerViewAdapterAsistente.ViewHolder>() {
 
     override fun  onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 

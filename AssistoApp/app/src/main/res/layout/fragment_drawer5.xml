@@ -6,17 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#07305d"
-    tools:context=".Drawer4Fragment">
-
-    <!-- TODO: Update blank fragment layout -->
+    tools:context=".drawer5Fragment">
 
     <TextView
-        android:id="@+id/tvTituloMisanuncios"
+        android:id="@+id/tvTituloMisanunciosCuidados"
         android:layout_width="266dp"
         android:layout_height="80dp"
         android:layout_marginTop="4dp"
         android:gravity="center"
-        android:text="Mis Anuncios"
+        android:text="Mis Anuncios de Cuidados"
         android:textColor="#FFEB3B"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,14 +23,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerviewMisanuncios"
+        android:id="@+id/recyclerviewMisanunciosCuidados"
         android:layout_width="400dp"
-        android:layout_height="600dp"
+        android:layout_height="580dp"
         android:background="#07305d"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTituloMisanuncios" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloMisanunciosCuidados" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

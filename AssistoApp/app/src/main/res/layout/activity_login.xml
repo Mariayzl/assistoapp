@@ -4,51 +4,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".LoginActivity">
 
-    <Button
-        android:id="@+id/bLoginIniciar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#07305d"
-        android:text="INICIAR SESION"
-        android:textColor="#FF9800"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvInfoLogin1" />
 
-    <Button
-        android:id="@+id/bLoginCuenta"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="255dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:backgroundTint="#07305d"
-        android:text="NUEVA CUENTA"
-        android:textColor="#FF9800"
-        app:layout_constraintBottom_toTopOf="@+id/bLoginAyuda"
+        android:layout_marginStart="150dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/tvInfoLogin2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bLoginIniciar" />
+        app:layout_constraintTop_toBottomOf="@+id/tvInfoLogin1">
 
-    <Button
-        android:id="@+id/bLoginAyuda"
-        android:layout_width="244dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#07305d"
-        android:text="¿Necesita Ayuda?"
-        android:textColor="#FF9800"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bLoginCuenta" />
+
+        <Button
+            android:id="@+id/bLoginIniciar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:background="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:text="INICIAR SESION"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/bLoginCuenta"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvInfoLogin1" />
+
+        <Button
+            android:id="@+id/bLoginCuenta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:text="NUEVA CUENTA"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/bLoginAyuda"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bLoginIniciar" />
+
+        <Button
+            android:id="@+id/bLoginAyuda"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:text="¿Necesita Ayuda?"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/tvInfoLogin2"
+            app:layout_constraintEnd_toEndOf="@+id/bLoginCuenta"
+            app:layout_constraintStart_toStartOf="@+id/bLoginCuenta"
+            app:layout_constraintTop_toBottomOf="@+id/bLoginCuenta" />
+
+
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/tvInfoLogin1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -58,24 +84,24 @@
         android:id="@+id/tvInfoLogin2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:text="Assisto,Juntos por un bienestar compartido"
         android:textColor="#07305d"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bLoginAyuda" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <TextView
         android:id="@+id/tvInfoLogin1"
         android:layout_width="362dp"
         android:layout_height="193dp"
-        android:layout_marginTop="20dp"
         android:justificationMode="inter_word"
         android:text="Assisto es una aplicación móvil que conecta a personas que necesitan cuidados especiales con asistentes que buscan trabajo. Ofrecemos una plataforma segura y confiable para encontrar asistentes de cuidado personalizados y de calidad. \n\nDescarga Assisto hoy y comienza a conectar con asistentes confiables en tu área."
         android:textColor="#07305d"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/bLoginIniciar"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView6" />

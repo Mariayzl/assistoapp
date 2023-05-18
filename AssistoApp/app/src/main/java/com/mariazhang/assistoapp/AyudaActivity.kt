@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.mariazhang.assistoapp.databinding.ActivityAyudaBinding
 import com.mariazhang.assistoapp.databinding.ActivityLoginBinding
 

@@ -8,7 +8,3 @@ interface OnItemClickAsistentes {
 
 }
 
-interface OnItemClickCuidados {
-    fun onItemClick(anuncioCuidados:anuncio_cuidados)
-
-}
