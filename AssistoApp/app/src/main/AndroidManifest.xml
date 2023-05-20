@@ -12,6 +12,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AssistoApp"
         tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.geo.Api_Key"
+            android:value="AIzaSyDB6zRXBbxonOKt4J3h8gGM8KRqB2sBzyU"
+        />
+
+
+        <activity
+            android:name=".MapaActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".BusquedaAvanzAsistenteActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".ModificarAnuncioCuidadosActivity"
             android:exported="false">

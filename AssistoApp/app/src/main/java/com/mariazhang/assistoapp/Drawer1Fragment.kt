@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.recyclerview.widget.RecyclerView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -45,10 +46,20 @@ class Drawer1Fragment : Fragment() {
 
 
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         super.onViewCreated(view, savedInstanceState)
+
+        val buttonMapa = view.findViewById<Button>(R.id.buttonMapa)
+
+        buttonMapa.setOnClickListener(){
+
+            val intent = Intent(requireContext(), MapaActivity::class.java)
+
+
+            startActivity(intent)
+
+        }
 
     }
 
