@@ -50,7 +50,7 @@ class VerAnuncioAsistenteActivity : AppCompatActivity() {
                     binding.check4.isChecked = anuncioAsis.exp_tipo_discapacidad[3]
                     binding.check5.isChecked = anuncioAsis.exp_tipo_discapacidad[4]
                     binding.etHorarioAsistente.setText(anuncioAsis.disponibilidad)
-                    binding.etReferenciaslaborales.setText(anuncioAsis.habilidades)
+                    binding.etHabilidadesAsistente.setText(anuncioAsis.habilidades)
                     binding.etSalarioAsistente.setText(anuncioAsis.salario)
                     binding.etContactoAsistente.setText(anuncioAsis.contacto)
                     binding.etCiudadAsistente.setText(anuncioAsis.ciudad)

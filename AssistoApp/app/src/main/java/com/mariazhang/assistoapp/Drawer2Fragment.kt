@@ -115,7 +115,7 @@ class Drawer2Fragment : Fragment() {
         }
 
         val spinner = view.findViewById<Spinner>(R.id.spinnerAsistente)
-        val opciones = listOf("Todos", "Ciudad", "Disponibilidad", "Habilidades", "Experiencia")
+        val opciones = listOf("Todos", "Ciudad", "Disponibilidad", "Experiencia")
         val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, opciones)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner.adapter = adapter
@@ -207,45 +207,6 @@ class Drawer2Fragment : Fragment() {
                         .addOnFailureListener { exception ->
                             Log.i(
                                 "PRUEBAS LOG.I - EXCEPTION - FILTRO ASISTENTE-Disponibilidad",
-                                "Error getting documents: ",
-                                exception
-                            )
-                        }
-                }
-
-                "Habilidades" -> {
-
-                    var listaFiltroAnuncio = mutableListOf<anuncio_asistentes>()
-
-                    firestore.collection("anuncio_asistente")
-                        .whereEqualTo("habilidades", binding.editTextTextPersonName.text.toString())
-                        .get()
-
-                        .addOnSuccessListener { documents ->
-
-                            for (document in documents) {
-                                listaFiltroAnuncio.add(anuncio_asistentes.fromJson(document.data))
-
-                            }
-
-                            val recyclerView =
-                                view.findViewById<RecyclerView>(R.id.recyclerviewAsistente)
-
-                            recyclerView.layoutManager = when {
-                                columnCount <= 1 -> LinearLayoutManager(context)
-                                else -> GridLayoutManager(context, columnCount)
-                            }
-
-                            recyclerView.adapter =
-                                RecyclerViewAdapterAsistente(listaFiltroAnuncio, listener)
-
-                            println(listaFiltroAnuncio.size.toString() + "PRUEBAS PRINT PRINT - FILTRO ASISTENTE-Habilidades---")
-
-                        }
-
-                        .addOnFailureListener { exception ->
-                            Log.i(
-                                "PRUEBAS LOG.I - EXCEPTION - FILTRO ASISTENTE-Habilidades",
                                 "Error getting documents: ",
                                 exception
                             )

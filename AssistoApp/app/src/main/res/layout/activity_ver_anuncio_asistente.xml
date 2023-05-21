@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:ems="30"
             android:paddingVertical="15dp"
-            android:text="Modificar anuncio Asistente"
+            android:text="Anuncio Asistente"
             android:textColor="#2196F3"
             android:textSize="20sp" />
 
@@ -38,7 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingVertical="3dp"
-            android:text="En esta ventana podrá modificar un anuncio . "
+            android:text="En esta ventana podrá ver los campos del anuncio. "
             android:textColor="#3F51B5"
             android:textSize="19sp" />
 
@@ -46,7 +46,7 @@
             android:id="@+id/tvModificarAnuncioAsistenteInfo2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Todos los campos son opcionales. El usuario al modificar el anuncio, acepta las conciciones de responsabilidad de modificar anuncios"
+            android:text="*Assisto no se reponsabiliza del contenido de los anuncios. El contenido de los campos son reponsibilidad del usuario."
             android:textColor="#9C27B0"
             android:textSize="16sp" />
 
@@ -74,8 +74,9 @@
             android:layout_height="wrap_content"
             android:ems="30"
             android:enabled="false"
-            android:hint="Ej: Cuidados Discapacidad Condicion Fisica de Viernes a Sabado "
+            android:hint="..."
             android:inputType="textPersonName"
+            android:minHeight="48dp"
             android:textColor="#3F51B5" />
 
         <TextView
@@ -92,8 +93,9 @@
             android:layout_height="wrap_content"
             android:ems="30"
             android:enabled="false"
-            android:hint="Ej: Descripción de experiencia"
+            android:hint="..."
             android:inputType="textPersonName"
+            android:minHeight="48dp"
             android:textColor="#3F51B5" />
 
         <TextView
@@ -182,23 +184,7 @@
             android:ems="30"
             android:enabled="false"
             android:hint="..."
-            android:textColor="#3F51B5" />
-
-        <TextView
-            android:id="@+id/tvReferenciaslaborales"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="30"
-            android:text="Referencias laborales"
-            android:textColor="#3F51B5" />
-
-        <EditText
-            android:id="@+id/etReferenciaslaborales"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="30"
-            android:enabled="false"
-            android:hint="..."
+            android:minHeight="48dp"
             android:textColor="#3F51B5" />
 
         <TextView
@@ -216,6 +202,7 @@
             android:ems="30"
             android:enabled="false"
             android:hint="..."
+            android:minHeight="48dp"
             android:textColor="#3F51B5" />
 
         <TextView

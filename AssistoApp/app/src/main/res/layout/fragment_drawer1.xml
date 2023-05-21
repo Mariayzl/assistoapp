@@ -32,7 +32,7 @@
             android:id="@+id/textViewBienvenida"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="En la pantalla principal de nuestra aplicación, encontrarás diferentes apartados para facilitar tu experiencia. Permíteme explicarte cómo funciona cada uno de ellos:"
+            android:text="En la pantalla principal de nuestra aplicación, encontrarás diferentes apartados para facilitar su experiencia.\nA continuación se detalla cada apartado de Assisto:"
             android:background="@color/white"
             android:textColor="@color/black"
             />
@@ -52,7 +52,7 @@
             android:id="@+id/textViewBienvenida2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="En el apartado de Asistente, encontrarás diferentes apartados para facilitar tu experiencia. Permíteme explicarte cómo funciona cada uno de ellos:"
+            android:text="En el apartado de Asistente, podrá buscar anuncios para encontrar una persona cualificada en el cuidado especial de las personas, o crear un anuncio para ofrecer sus servicios orientandos a los cuidados a personas que requieran alguna necesidad o condición especial."
             android:background="@color/white"
             android:textColor="@color/black"
  />
@@ -72,7 +72,7 @@
             android:id="@+id/textViewBienvenida3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="En el apartado de Cuidados, encontrarás diferentes apartados para facilitar tu experiencia. Permíteme explicarte cómo funciona cada uno de ellos:"
+            android:text="En el apartado de Cuidados, podrá buscar anuncios para ofrecer sus servicios en cuidados especiales, o crear un anuncio para buscar a una persona cualificadas para servicios orientados a los cuidados de personas que requieran alguna necesidad o condición especial."
             android:background="@color/white"
             android:textColor="@color/black"
             />
@@ -92,7 +92,7 @@
             android:id="@+id/textViewBienvenida4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="En el apartado de Mis anuncios, encontrarás diferentes apartados para facilitar tu experiencia. Permíteme explicarte cómo funciona cada uno de ellos:"
+            android:text="En el apartado de Mis anuncios, encontrarás sus anuncios creados tanto de tipo Asistente como de tipo Cuidados, en donde podrá modificarlos o eliminarlos."
             android:background="@color/white"
             android:textColor="@color/black" />
 

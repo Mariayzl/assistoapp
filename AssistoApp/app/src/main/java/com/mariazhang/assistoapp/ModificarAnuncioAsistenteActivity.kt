@@ -64,7 +64,7 @@ class ModificarAnuncioAsistenteActivity : AppCompatActivity() {
                         anuncioMapa["experiencia"] = binding.etExperienciaAsistente.text.toString()
                         anuncioMapa["exp_tipo_discapacidad"] = tipo_discapacidad
                         anuncioMapa["disponibilidad"] = binding.etHorarioAsistente.text.toString()
-                        anuncioMapa["habilidades"] = binding.etReferenciaslaborales.text.toString()
+                        anuncioMapa["habilidades"] = binding.etHabilidadesAsistente.text.toString()
                         anuncioMapa["salario"] = binding.etSalarioAsistente.text.toString()
                         anuncioMapa["contacto"] = binding.etContactoAsistente.text.toString()
                         anuncioMapa["ciudad"] = binding.etCiudadAsistente.text.toString()
@@ -158,7 +158,7 @@ class ModificarAnuncioAsistenteActivity : AppCompatActivity() {
                     binding.check4.isChecked = anuncioAsis.exp_tipo_discapacidad[3]
                     binding.check5.isChecked = anuncioAsis.exp_tipo_discapacidad[4]
                     binding.etHorarioAsistente.setText(anuncioAsis.disponibilidad)
-                    binding.etReferenciaslaborales.setText(anuncioAsis.habilidades)
+                    binding.etHabilidadesAsistente.setText(anuncioAsis.habilidades)
                     binding.etSalarioAsistente.setText(anuncioAsis.salario)
                     binding.etContactoAsistente.setText(anuncioAsis.contacto)
                     binding.etCiudadAsistente.setText(anuncioAsis.ciudad)

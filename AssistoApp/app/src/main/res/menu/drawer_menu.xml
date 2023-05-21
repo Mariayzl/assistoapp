@@ -15,11 +15,11 @@
 
     <item
         android:id="@+id/drawer4Fragment"
-        android:title="Mis anuncios"/>
+        android:title="Mis anuncios Asistente"/>
 
     <item
         android:id="@+id/drawer5Fragment"
-        android:title="Mis anuncios cuidados"/>
+        android:title="Mis anuncios Cuidados"/>
 
     <item
         android:id="@+id/perfilActivity"

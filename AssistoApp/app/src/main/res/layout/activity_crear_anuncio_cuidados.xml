@@ -34,20 +34,12 @@
             android:textColor="#2196F3"
             android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/tvCreaAnuncioCuidadosInfo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingVertical="3dp"
-            android:text="En esta ventana podrá crear un anuncio para buscar a una persona cualificadas para servicios orientandos a los cuidados de personas que requieran alguna necesidad o condición especial. "
-            android:textColor="#3F51B5"
-            android:textSize="19sp" />
 
         <TextView
             android:id="@+id/tvCreaAnuncioCuidadosInfo2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Todos los campos son opcionales. El usuario al crear el anuncio, acepta las conciciones de responsabilidad de crear anuncios"
+            android:text="Los campos Ciudad, Grado de Discapacidad y Tipo de Jornada son obligatorios. El usuario al crear el anuncio, acepta las conciciones de responsabilidad de crear anuncios."
             android:textColor="#9C27B0"
             android:textSize="16sp" />
 
@@ -74,8 +66,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="30"
-            android:hint="Ej: Cuidados de Viernes a Sabado "
+            android:hint="Ej: Cuidados Físicos - Diario"
             android:inputType="textPersonName"
+            android:minHeight="48dp"
             android:textColor="#3F51B5" />
 
         <TextView
@@ -88,10 +81,10 @@
 
         <EditText
             android:id="@+id/etDescripcion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="170dp"
             android:ems="30"
-            android:hint="Descripción del cuidado"
+            android:hint="Descripción del cuidado, Ej: Se necesita persona con experiencia en cuidado de personas con discapacidad física diariamente, no se requiere experiencia previa, cualquier duda contactar al teléfono del anuncio"
             android:inputType="textPersonName"
             android:textColor="#3F51B5" />
 
@@ -100,7 +93,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="30"
-            android:text="Grado Discapacidad"
+            android:text="Grado Discapacidad\n*Campo númerico y obligatorio:"
             android:textColor="#3F51B5" />
 
         <EditText
@@ -109,6 +102,7 @@
             android:layout_height="wrap_content"
             android:ems="30"
             android:hint="Ej: 65"
+            android:minHeight="48dp"
             android:textColor="#3F51B5" />
 
         <TextView
@@ -206,20 +200,23 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
+
             <CheckBox
                 android:id="@+id/checkDiscapacidad4"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="discapacidad brazos"
                 tools:ignore="TouchTargetSizeCheck" />
+
             <CheckBox
                 android:id="@+id/checkDiscapacidad5"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="1dp"
+                android:layout_height="62dp"
                 android:layout_weight="1"
                 android:text="discapacidad piernas"
                 tools:ignore="TouchTargetSizeCheck" />
+
             <CheckBox
                 android:id="@+id/checkDiscapacidad6"
                 android:layout_width="0dp"
@@ -337,7 +334,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="30"
-            android:text="Disponibilidad de horarios"
+            android:text="Disponibilidad de horarios \n*Opciones únicas y obligatorias: \nDiaria, Lunes a Viernes, Festivos, Eventual, Fines de Semana, Ninguno."
             android:textColor="#3F51B5" />
 
         <EditText
@@ -345,7 +342,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="30"
-            android:hint="..."
+            android:hint="Ej: Diaria"
+            android:minHeight="48dp"
             android:textColor="#3F51B5" />
 
         <TextView
@@ -361,7 +359,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="30"
-            android:hint="..."
+            android:hint="Ej: renumeración negociable"
+            android:minHeight="48dp"
             android:textColor="#3F51B5" />
 
         <TextView
@@ -377,7 +376,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="30"
-            android:hint="..."
+            android:hint="EJ: 626551133"
             android:textColor="#3F51B5" />
 
         <TextView
@@ -385,7 +384,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="30"
-            android:text="Ciudad"
+            android:text="Ciudad\n*Campo obligatorio:"
             android:textColor="#3F51B5" />
 
         <EditText
@@ -393,7 +392,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="30"
-            android:hint="..."
+            android:hint="Madrid"
             android:textColor="#3F51B5" />
 
         <TextView
@@ -409,7 +408,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="30"
-            android:hint="..."
+            android:hint="Ej: Madrid"
             android:textColor="#3F51B5" />
 
         <Button

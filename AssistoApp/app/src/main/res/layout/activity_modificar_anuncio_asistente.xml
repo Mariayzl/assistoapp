@@ -46,7 +46,7 @@
             android:id="@+id/tvModificarAnuncioAsistenteInfo2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Todos los campos son opcionales. El usuario al modificar el anuncio, acepta las conciciones de responsabilidad de modificar anuncios"
+            android:text="Los campos Ciudad, Disponibilidad de Horarios, Habilidades y Expereincia son obligatorios. El usuario al modificar el anuncio, acepta las conciciones de responsabilidad de modificar anuncios."
             android:textColor="#9C27B0"
             android:textSize="16sp" />
 
@@ -75,6 +75,7 @@
             android:ems="30"
             android:hint="Ej: Cuidados Discapacidad Condicion Fisica de Viernes a Sabado "
             android:inputType="textPersonName"
+            android:minHeight="48dp"
             android:textColor="#3F51B5" />
 
         <TextView
@@ -82,7 +83,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="30"
-            android:text="Experiencia en cuidado de personas con necesidades especiales"
+            android:text="Experiencia en años en cuidados de personas con necesidades especiales \nSi su experiencia es menor a 1 año, escriba 0. \n*Campo númerico y obligatorio:"
             android:textColor="#3F51B5" />
 
         <EditText
@@ -90,8 +91,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="30"
-            android:hint="Ej: Descripción de experiencia"
+            android:hint="Ej: 3"
             android:inputType="textPersonName"
+            android:minHeight="48dp"
             android:textColor="#3F51B5" />
 
         <TextView
@@ -160,7 +162,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="30"
-            android:text="Disponibilidad de horarios"
+            android:text="Disponibilidad de horarios\n*Opciones únicas y obligatorias: \nDiaria, Lunes a Viernes, Festivos, Eventual, Fines de Semana, Ninguno."
             android:textColor="#3F51B5" />
 
         <EditText
@@ -169,30 +171,16 @@
             android:layout_height="wrap_content"
             android:ems="30"
             android:hint="..."
+            android:minHeight="48dp"
             android:textColor="#3F51B5" />
 
-        <TextView
-            android:id="@+id/tvReferenciaslaborales"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="30"
-            android:text="Referencias laborales"
-            android:textColor="#3F51B5" />
-
-        <EditText
-            android:id="@+id/etReferenciaslaborales"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="30"
-            android:hint="..."
-            android:textColor="#3F51B5" />
 
         <TextView
             android:id="@+id/tvHabilidadesAsistente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="30"
-            android:text="Habilidades relevantes"
+            android:text="Habilidades relevantes\n Ej: Curso RCP, primeros auxilios, asistencia domiciliaria, cuidado de personas con discapacidad, atención a personas con necesidades especiales "
             android:textColor="#3F51B5" />
 
         <EditText
@@ -240,7 +228,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="30"
-            android:text="Ciudad"
+            android:text="Ciudad \n*Campo obligatorio:"
             android:textColor="#3F51B5" />
 
         <EditText
