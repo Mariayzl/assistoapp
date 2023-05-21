@@ -30,7 +30,6 @@ class CrearAnuncioAsistenteActivity : AppCompatActivity() {
 
 
         binding.buttonCrearAsistente.setOnClickListener {
-
             binding.buttonCrearAsistente.isEnabled = false
             binding.buttonRestablecerAsistente.isEnabled = false
 
@@ -44,7 +43,6 @@ class CrearAnuncioAsistenteActivity : AppCompatActivity() {
 
             // para pasar el valor de la autenticación de Firebase entre actividades
             val firestore = FirebaseFirestore.getInstance()
-
             val datos_anuncio_asistente: MutableMap<String, Any> =
                 HashMap()
 

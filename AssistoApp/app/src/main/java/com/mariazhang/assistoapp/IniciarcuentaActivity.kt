@@ -20,21 +20,17 @@ class IniciarcuentaActivity : AppCompatActivity() {
         setContentView(
             ActivityIniciarcuentaBinding.inflate(layoutInflater).also { binding = it }.root
         )
-
         authenti = FirebaseAuth.getInstance()
 
         binding.buttonIniciar.setOnClickListener {
-
             var email = binding.etmail.text.toString()
             var password = binding.etpassword.text.toString()
 
             authenti.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
-
                         print(task)
-                        Log.i("weeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerror", task.toString())
-
+                        Log.i("-----Proceso Iniciar Cuenta ejecutando-----", task.toString())
                         var usuariologin = this?.getSharedPreferences("login", MODE_PRIVATE)
                         val intent = Intent(this, MainActivity::class.java)
 
@@ -50,12 +46,7 @@ class IniciarcuentaActivity : AppCompatActivity() {
                             Toast.LENGTH_SHORT
                         ).show()
                     }
-
-
                 }
-
-
         }
-
     }
 }
