@@ -1,0 +1,14 @@
+{
+"featureType": "poi.business",
+"elementType": "all",
+"stylers": [
+{
+"visibility": "on",
+"featureType": "poi.wheelchair_accessible"
+},
+{
+"visibility": "on",
+"featureType": "poi.accessible_parking"
+}
+]
+}

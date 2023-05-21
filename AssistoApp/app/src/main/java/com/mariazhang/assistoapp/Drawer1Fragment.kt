@@ -54,7 +54,7 @@ class Drawer1Fragment : Fragment() {
 
         buttonMapa.setOnClickListener(){
 
-            val intent = Intent(requireContext(), MapaActivity::class.java)
+            val intent = Intent(requireContext(), MapasActivity::class.java)
 
 
             startActivity(intent)
