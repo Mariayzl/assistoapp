@@ -41,4 +41,5 @@ class MapasActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap.moveCamera(CameraUpdateFactory.newLatLng(instituto))
     }
 
+
 }
