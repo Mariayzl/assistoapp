@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import com.google.firebase.firestore.FirebaseFirestore
 import com.mariazhang.assistoapp.database.anuncio_asistentes
 import com.mariazhang.assistoapp.databinding.ActivityModificarAnuncioAsistenteBinding
@@ -32,71 +33,85 @@ class ModificarAnuncioAsistenteActivity : AppCompatActivity() {
         cargar()
 
         binding.buttonModificarAsistente.setOnClickListener {
+            if (binding.etEnunciadoAsistente.text.isNotEmpty() &&
+                binding.etExperienciaAsistente.text.isNotEmpty() &&
+                binding.etHorarioAsistente.text.isNotEmpty() &&
+                binding.etHabilidadesAsistente.text.isNotEmpty() &&
+                binding.etSalarioAsistente.text.isNotEmpty() &&
+                binding.etContactoAsistente.text.isNotEmpty() &&
+                binding.etCiudadAsistente.text.isNotEmpty() &&
+                binding.etProvinciaAsistente.text.isNotEmpty()
+            ) {
+                binding.buttonModificarAsistente.isEnabled = false
+                binding.buttonRestablecerAsistente.isEnabled = false
+                binding.buttonEliminarAsistente.isEnabled = false
 
-            binding.buttonModificarAsistente.isEnabled = false
-            binding.buttonModificarAsistente.isEnabled = false
-            binding.buttonEliminarAsistente.isEnabled = false
+                val id = intent.getStringExtra("ID")
+                val firestore = FirebaseFirestore.getInstance()
 
-            val id = intent.getStringExtra("ID")
-            val firestore = FirebaseFirestore.getInstance()
+                firestore.collection("anuncio_asistente").whereEqualTo("anuncio_asistente_id", id)
+                    .get()
+                    .addOnSuccessListener { documents ->
 
-            firestore.collection("anuncio_asistente").whereEqualTo("anuncio_asistente_id", id).get()
-                .addOnSuccessListener { documents ->
-
-                    val anuncioMapa: MutableMap<String, Any> = HashMap()
+                        val anuncioMapa: MutableMap<String, Any> = HashMap()
 
 
 
-                    for (document in documents) {
+                        for (document in documents) {
 
 
-                        val tipo_discapacidad = listOf(
-                            binding.check1.isChecked,
-                            binding.check2.isChecked,
-                            binding.check3.isChecked,
-                            binding.check4.isChecked,
-                            binding.check5.isChecked
-                        )
+                            val tipo_discapacidad = listOf(
+                                binding.check1.isChecked,
+                                binding.check2.isChecked,
+                                binding.check3.isChecked,
+                                binding.check4.isChecked,
+                                binding.check5.isChecked
+                            )
 
-                        anuncioMapa["anuncio_asistente_id"] = id.toString()
-                        anuncioMapa["email"] = document.data["email"].toString()
-                        anuncioMapa["enunciado"] = binding.etEnunciadoAsistente.text.toString()
-                        anuncioMapa["experiencia"] = binding.etExperienciaAsistente.text.toString()
-                        anuncioMapa["exp_tipo_discapacidad"] = tipo_discapacidad
-                        anuncioMapa["disponibilidad"] = binding.etHorarioAsistente.text.toString()
-                        anuncioMapa["habilidades"] = binding.etHabilidadesAsistente.text.toString()
-                        anuncioMapa["salario"] = binding.etSalarioAsistente.text.toString()
-                        anuncioMapa["contacto"] = binding.etContactoAsistente.text.toString()
-                        anuncioMapa["ciudad"] = binding.etCiudadAsistente.text.toString()
-                        anuncioMapa["provincia"] = binding.etProvinciaAsistente.text.toString()
+                            anuncioMapa["anuncio_asistente_id"] = id.toString()
+                            anuncioMapa["email"] = document.data["email"].toString()
+                            anuncioMapa["enunciado"] = binding.etEnunciadoAsistente.text.toString()
+                            anuncioMapa["experiencia"] =
+                                binding.etExperienciaAsistente.text.toString()
+                            anuncioMapa["exp_tipo_discapacidad"] = tipo_discapacidad
+                            anuncioMapa["disponibilidad"] =
+                                binding.etHorarioAsistente.text.toString()
+                            anuncioMapa["habilidades"] =
+                                binding.etHabilidadesAsistente.text.toString()
+                            anuncioMapa["salario"] = binding.etSalarioAsistente.text.toString()
+                            anuncioMapa["contacto"] = binding.etContactoAsistente.text.toString()
+                            anuncioMapa["ciudad"] = binding.etCiudadAsistente.text.toString()
+                            anuncioMapa["provincia"] = binding.etProvinciaAsistente.text.toString()
 
-                        val document = documents.documents[0]
-                        document.reference.update(anuncioMapa)
+                            val document = documents.documents[0]
+                            document.reference.update(anuncioMapa)
 
-                        binding.buttonModificarAsistente.isEnabled = true
-                        binding.buttonModificarAsistente.isEnabled = true
-                        binding.buttonEliminarAsistente.isEnabled = true
+                            binding.buttonModificarAsistente.isEnabled = true
+                            binding.buttonRestablecerAsistente.isEnabled = true
+                            binding.buttonEliminarAsistente.isEnabled = true
+
+                        }
 
                     }
 
-                }
-
-                .addOnFailureListener { exception ->
-                    Log.i("Weeeeeeeeeeeee", "Error getting documents: ", exception)
-                }
-
+                    .addOnFailureListener { exception ->
+                        Log.i("Weeeeeeeeeeeee", "Error getting documents: ", exception)
+                    }
+            }else{
+                Toast.makeText(applicationContext, "Faltan campos por rellenar", Toast.LENGTH_SHORT).show()
+            }
         }
 
         binding.buttonRestablecerAsistente.setOnClickListener {
 
             binding.buttonModificarAsistente.isEnabled = false
-            binding.buttonModificarAsistente.isEnabled = false
+            binding.buttonRestablecerAsistente.isEnabled = false
             binding.buttonEliminarAsistente.isEnabled = false
 
             cargar()
 
             binding.buttonModificarAsistente.isEnabled = true
-            binding.buttonModificarAsistente.isEnabled = true
+            binding.buttonRestablecerAsistente.isEnabled = true
             binding.buttonEliminarAsistente.isEnabled = true
 
         }
@@ -105,7 +120,7 @@ class ModificarAnuncioAsistenteActivity : AppCompatActivity() {
 
 
             binding.buttonModificarAsistente.isEnabled = false
-            binding.buttonModificarAsistente.isEnabled = false
+            binding.buttonRestablecerAsistente.isEnabled = false
             binding.buttonEliminarAsistente.isEnabled = false
 
             val id = intent.getStringExtra("ID")
@@ -120,7 +135,7 @@ class ModificarAnuncioAsistenteActivity : AppCompatActivity() {
                         document.reference.delete()
 
                         binding.buttonModificarAsistente.isEnabled = true
-                        binding.buttonModificarAsistente.isEnabled = true
+                        binding.buttonRestablecerAsistente.isEnabled = true
                         binding.buttonEliminarAsistente.isEnabled = true
 
                         val intent = Intent(this, MainActivity::class.java)

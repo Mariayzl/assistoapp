@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.RecyclerView
@@ -53,11 +54,17 @@ class Drawer1Fragment : Fragment() {
         val buttonMapa = view.findViewById<Button>(R.id.buttonMapa)
 
         buttonMapa.setOnClickListener(){
-
             val intent = Intent(requireContext(), MapasActivity::class.java)
-
-
             startActivity(intent)
+
+        }
+
+        val buttonSalirSesion = view.findViewById<Button>(R.id.buttonSalirSesion)
+
+        buttonSalirSesion.setOnClickListener(){
+            val intent = Intent(requireContext(), LoginActivity::class.java)
+            startActivity(intent)
+            Toast.makeText(requireContext(), "Saliendo de la aplicación", Toast.LENGTH_SHORT).show()
 
         }
 

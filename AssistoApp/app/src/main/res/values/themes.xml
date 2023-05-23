@@ -17,8 +17,8 @@
     </style>
 
     <style name="Theme.MySplashScreen" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">#0b488c</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/logo1</item>
+        <item name="windowSplashScreenBackground">#DF895A</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo4</item>
         <item name="postSplashScreenTheme">@style/Theme.AssistoApp</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

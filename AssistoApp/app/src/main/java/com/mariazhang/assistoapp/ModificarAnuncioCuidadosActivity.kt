@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import com.google.firebase.firestore.FirebaseFirestore
 import com.mariazhang.assistoapp.database.anuncio_cuidados
 import com.mariazhang.assistoapp.databinding.ActivityCrearAnuncioCuidadosBinding
@@ -11,6 +12,7 @@ import com.mariazhang.assistoapp.databinding.ActivityModificarAnuncioCuidadosBin
 import java.util.HashMap
 
 class ModificarAnuncioCuidadosActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivityModificarAnuncioCuidadosBinding
 
     override fun onBackPressed() {
@@ -30,80 +32,97 @@ class ModificarAnuncioCuidadosActivity : AppCompatActivity() {
         cargar()
 
         binding.buttonModificarCuidados.setOnClickListener {
+            if (binding.etEnunciadoCuidados.text.isNotEmpty() &&
+                binding.etDescripcion.text.isNotEmpty() &&
+                binding.etGradodiscapacidad.text.isNotEmpty() &&
+                binding.etJornadaCuidados.text.isNotEmpty() &&
+                binding.etSalarioCuidados.text.isNotEmpty() &&
+                binding.etContactoCuidados.text.isNotEmpty() &&
+                binding.etCiudadCuidados.text.isNotEmpty() &&
+                binding.etProvinciaCuidados.text.isNotEmpty()
+            ) {
+                binding.buttonModificarCuidados.isEnabled = false
+                binding.buttonBorrarCuidados.isEnabled = false
+                binding.buttonRestablecerCuidados.isEnabled = false
 
-            binding.buttonModificarCuidados.isEnabled = false
-            binding.buttonBorrarCuidados.isEnabled = false
-            binding.buttonRestablecerCuidados.isEnabled = false
+                val id = intent.getStringExtra("ID")
+                val firestore = FirebaseFirestore.getInstance()
 
-            val id = intent.getStringExtra("ID")
-            val firestore = FirebaseFirestore.getInstance()
+                firestore.collection("anuncio_cuidados").whereEqualTo("anuncio_cuidados_id", id)
+                    .get()
+                    .addOnSuccessListener { documents ->
 
-            firestore.collection("anuncio_cuidados").whereEqualTo("anuncio_cuidados_id", id).get()
-                .addOnSuccessListener { documents ->
+                        val anuncioCuidadoMapa: MutableMap<String, Any> = HashMap()
 
-                    val anuncioCuidadoMapa: MutableMap<String, Any> = HashMap()
-
-                    for (document in documents) {
+                        for (document in documents) {
 
 
-                        val tipo_discapacidad = listOf(
-                            binding.check1.isChecked,
-                            binding.check2.isChecked,
-                            binding.check3.isChecked,
-                            binding.check4.isChecked,
-                            binding.check5.isChecked
-                        )
+                            val tipo_discapacidad = listOf(
+                                binding.check1.isChecked,
+                                binding.check2.isChecked,
+                                binding.check3.isChecked,
+                                binding.check4.isChecked,
+                                binding.check5.isChecked
+                            )
 
-                        val discapacidades = listOf(
-                            binding.checkDiscapacidad1.isChecked,
-                            binding.checkDiscapacidad2.isChecked,
-                            binding.checkDiscapacidad3.isChecked,
-                            binding.checkDiscapacidad4.isChecked,
-                            binding.checkDiscapacidad5.isChecked,
-                            binding.checkDiscapacidad6.isChecked,
-                            binding.checkDiscapacidad7.isChecked,
-                            binding.checkDiscapacidad8.isChecked,
-                        )
+                            val discapacidades = listOf(
+                                binding.checkDiscapacidad1.isChecked,
+                                binding.checkDiscapacidad2.isChecked,
+                                binding.checkDiscapacidad3.isChecked,
+                                binding.checkDiscapacidad4.isChecked,
+                                binding.checkDiscapacidad5.isChecked,
+                                binding.checkDiscapacidad6.isChecked,
+                                binding.checkDiscapacidad7.isChecked,
+                                binding.checkDiscapacidad8.isChecked,
+                            )
 
-                        val necesidades = listOf(
-                            binding.checkNecesidad1.isChecked,
-                            binding.checkNecesidad2.isChecked,
-                            binding.checkNecesidad3.isChecked,
-                            binding.checkNecesidad4.isChecked,
-                            binding.checkNecesidad5.isChecked,
-                            binding.checkNecesidad6.isChecked,
-                            binding.checkNecesidad7.isChecked,
-                            binding.checkNecesidad8.isChecked,
-                        )
+                            val necesidades = listOf(
+                                binding.checkNecesidad1.isChecked,
+                                binding.checkNecesidad2.isChecked,
+                                binding.checkNecesidad3.isChecked,
+                                binding.checkNecesidad4.isChecked,
+                                binding.checkNecesidad5.isChecked,
+                                binding.checkNecesidad6.isChecked,
+                                binding.checkNecesidad7.isChecked,
+                                binding.checkNecesidad8.isChecked,
+                            )
 
-                        anuncioCuidadoMapa["anuncio_asistente_id"] = id.toString()
-                        anuncioCuidadoMapa["email"] = document.data["email"].toString()
-                        anuncioCuidadoMapa["enunciado"] = binding.etEnunciadoCuidados.text.toString()
-                        anuncioCuidadoMapa["grado_discapacidad"] = binding.etGradodiscapacidad.text.toString()
-                        anuncioCuidadoMapa["tipo_discapacidad"] = tipo_discapacidad
-                        anuncioCuidadoMapa["salario"] = binding.etSalarioCuidados.text.toString()
-                        anuncioCuidadoMapa["contacto"] = binding.etContactoCuidados.text.toString()
-                        anuncioCuidadoMapa["ciudad"] = binding.etCiudadCuidados.text.toString()
-                        anuncioCuidadoMapa["descripcion"] = binding.etDescripcion.text.toString()
-                        anuncioCuidadoMapa["provincia"] = binding.etProvinciaCuidados.text.toString()
-                        anuncioCuidadoMapa["discapacidades"] = discapacidades
-                        anuncioCuidadoMapa["necesidades"] = necesidades
+                            anuncioCuidadoMapa["anuncio_asistente_id"] = id.toString()
+                            anuncioCuidadoMapa["email"] = document.data["email"].toString()
+                            anuncioCuidadoMapa["enunciado"] =
+                                binding.etEnunciadoCuidados.text.toString()
+                            anuncioCuidadoMapa["grado_discapacidad"] =
+                                binding.etGradodiscapacidad.text.toString()
+                            anuncioCuidadoMapa["tipo_discapacidad"] = tipo_discapacidad
+                            anuncioCuidadoMapa["salario"] =
+                                binding.etSalarioCuidados.text.toString()
+                            anuncioCuidadoMapa["contacto"] =
+                                binding.etContactoCuidados.text.toString()
+                            anuncioCuidadoMapa["ciudad"] = binding.etCiudadCuidados.text.toString()
+                            anuncioCuidadoMapa["descripcion"] =
+                                binding.etDescripcion.text.toString()
+                            anuncioCuidadoMapa["provincia"] =
+                                binding.etProvinciaCuidados.text.toString()
+                            anuncioCuidadoMapa["discapacidades"] = discapacidades
+                            anuncioCuidadoMapa["necesidades"] = necesidades
 
-                        val document = documents.documents[0]
-                        document.reference.update(anuncioCuidadoMapa)
+                            val document = documents.documents[0]
+                            document.reference.update(anuncioCuidadoMapa)
 
-                        binding.buttonBorrarCuidados.isEnabled = true
-                        binding.buttonModificarCuidados.isEnabled = true
-                        binding.buttonRestablecerCuidados.isEnabled = true
+                            binding.buttonBorrarCuidados.isEnabled = true
+                            binding.buttonModificarCuidados.isEnabled = true
+                            binding.buttonRestablecerCuidados.isEnabled = true
+
+                        }
 
                     }
 
-                }
-
-                .addOnFailureListener { exception ->
-                    Log.i("Weeeeeeeeeeeee", "Error getting documents: ", exception)
-                }
-
+                    .addOnFailureListener { exception ->
+                        Log.i("Weeeeeeeeeeeee", "Error getting documents: ", exception)
+                    }
+            }else{
+                Toast.makeText(applicationContext, "Faltan campos por rellenar", Toast.LENGTH_SHORT).show()
+            }
         }
 
         binding.buttonRestablecerCuidados.setOnClickListener {
@@ -198,7 +217,7 @@ class ModificarAnuncioCuidadosActivity : AppCompatActivity() {
                     binding.checkNecesidad8.isChecked = anuncioCuidados.necesidades[7]
 
                     binding.etSalarioCuidados.setText(anuncioCuidados.salario)
-                    binding.etSalarioCuidados.setText(anuncioCuidados.tipo_jornada)
+                    binding.etJornadaCuidados.setText(anuncioCuidados.tipo_jornada)
                     binding.etContactoCuidados.setText(anuncioCuidados.contacto)
                     binding.etCiudadCuidados.setText(anuncioCuidados.ciudad)
                     binding.etGradodiscapacidad.setText(anuncioCuidados.grado_discapacidad)

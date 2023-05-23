@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#07305d"
+    tools:context=".Drawer1Fragment">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#07305d"
+    android:fillViewport="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".Drawer3Fragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -13,45 +22,27 @@
         android:id="@+id/tvFiltrotexto2Cuidados"
         android:layout_width="354dp"
         android:layout_height="66dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="7dp"
         android:gravity="center"
         android:text="Encuentra lo que buscas cerca de ti. Utiliza los filtros por tipo de discapacidad o ciudad, para mejorar sus resultados de búsqueda."
         android:textColor="#FFEB3B"
         android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerviewCuidados"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etbusqueda2" />
-
-    <TextView
-        android:id="@+id/tvFiltro2"
-        android:layout_width="65dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="129dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="3dp"
-        android:gravity="center"
-        android:text="filtro:"
-        android:textColor="#FFEB3B"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/etbusqueda2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/tvUltimoanuncio2"
-        app:layout_constraintTop_toBottomOf="@+id/tvTituloCuidados" />
 
     <TextView
         android:id="@+id/tvTituloCuidados"
         android:layout_width="266dp"
         android:layout_height="80dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginBottom="10dp"
         android:gravity="center"
         android:text="Cuidados"
         android:textColor="#FFEB3B"
         android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvUltimoanuncio2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -59,13 +50,12 @@
         android:id="@+id/tvUltimoanuncio2"
         android:layout_width="161dp"
         android:layout_height="24dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="Últimos anuncios"
         android:textColor="#FFEB3B"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/etbusqueda2"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerCuidados"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTituloCuidados" />
 
@@ -73,27 +63,25 @@
         android:id="@+id/etbusqueda2"
         android:layout_width="393dp"
         android:layout_height="49dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:background="@color/white"
         android:ems="10"
+        android:hint="búsque campo ..."
         android:inputType="textPersonName"
-        android:text="búsque campo ..."
         app:layout_constraintBottom_toTopOf="@+id/tvFiltrotexto2Cuidados"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvUltimoanuncio2" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerCuidados" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerviewCuidados"
         android:layout_width="390dp"
         android:layout_height="313dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="17dp"
+        android:layout_marginTop="4dp"
         android:background="#07305d"
         app:layout_constraintBottom_toTopOf="@+id/buttonCrear2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvFiltrotexto2Cuidados" />
 
@@ -101,24 +89,21 @@
         android:id="@+id/buttonCrear2"
         android:layout_width="242dp"
         android:layout_height="63dp"
-        android:layout_marginTop="17dp"
-        android:layout_marginBottom="76dp"
+        android:layout_marginTop="4dp"
         android:text="Crear anuncio Cuidados"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerviewCuidados"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/recyclerviewCuidados" />
 
     <Button
         android:id="@+id/buttonFiltroCuidados"
         android:layout_width="156dp"
         android:layout_height="51dp"
-        android:layout_marginEnd="16dp"
         android:text="Buscar"
         app:layout_constraintBottom_toBottomOf="@+id/spinnerCuidados"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/spinnerCuidados"
         app:layout_constraintTop_toTopOf="@+id/spinnerCuidados"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -126,13 +111,14 @@
         android:id="@+id/spinnerCuidados"
         android:layout_width="181dp"
         android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="3dp"
+        android:layout_marginTop="25dp"
         android:background="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/tvFiltrotexto2Cuidados"
+        app:layout_constraintBottom_toTopOf="@+id/etbusqueda2"
+        app:layout_constraintEnd_toStartOf="@+id/buttonFiltroCuidados"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etbusqueda2" />
+        app:layout_constraintTop_toBottomOf="@+id/tvUltimoanuncio2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

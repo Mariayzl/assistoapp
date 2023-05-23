@@ -74,8 +74,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="30"
+            android:inputType="textMultiLine"
             android:hint="Ej: Cuidados de Viernes a Sabado "
-            android:inputType="textPersonName"
             android:minHeight="48dp"
             android:textColor="#3F51B5" />
 
@@ -93,7 +93,7 @@
             android:layout_height="104dp"
             android:ems="30"
             android:hint="Descripción del cuidado"
-            android:inputType="textPersonName"
+            android:inputType="textMultiLine"
             android:textColor="#3F51B5" />
 
         <TextView
@@ -204,10 +204,12 @@
                 android:text="afecta habla"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="48dp"
             android:orientation="horizontal">
+
             <CheckBox
                 android:id="@+id/checkDiscapacidad4"
                 android:layout_width="0dp"
@@ -215,6 +217,7 @@
                 android:layout_weight="1"
                 android:text="discapacidad brazos"
                 tools:ignore="TouchTargetSizeCheck" />
+
             <CheckBox
                 android:id="@+id/checkDiscapacidad5"
                 android:layout_width="0dp"
@@ -222,6 +225,7 @@
                 android:layout_weight="1"
                 android:text="discapacidad piernas"
                 tools:ignore="TouchTargetSizeCheck" />
+
             <CheckBox
                 android:id="@+id/checkDiscapacidad6"
                 android:layout_width="0dp"
@@ -420,7 +424,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#00BCD4"
             android:ems="30"
-            android:text="Modificar Cuidados" />
+            android:text="Modificar anuncio" />
 
         <Button
             android:id="@+id/buttonRestablecerCuidados"
@@ -428,15 +432,15 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#3F51B5"
             android:ems="30"
-            android:text="Reestablecer" />
+            android:text="Reestablecer datos" />
 
         <Button
             android:id="@+id/buttonBorrarCuidados"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#ED0B0B"
+            android:backgroundTint="#E91E63"
             android:ems="30"
-            android:text="Borrar" />
+            android:text="Eliminar anuncio"  />
 
     </LinearLayout>
 

@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#07305d"
+    tools:context=".Drawer1Fragment">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#07305d"
@@ -13,46 +21,27 @@
         android:id="@+id/tvFiltrotexto1"
         android:layout_width="381dp"
         android:layout_height="42dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="7dp"
         android:gravity="center"
         android:text="Encuentra lo que buscas cerca de ti. Utiliza los filtros por ciudad para mejorar sus resultados de búsqueda."
         android:textColor="#FFEB3B"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/recyclerviewAsistente"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
-        />
-
-    <TextView
-        android:id="@+id/tvFiltro1"
-        android:layout_width="65dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="129dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="3dp"
-        android:gravity="center"
-        android:text="filtro:"
-        android:textColor="#FFEB3B"
-        android:textSize="18sp"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/tvUltimoanuncio1"
-        app:layout_constraintTop_toBottomOf="@+id/tvTituloAsistente" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
     <TextView
         android:id="@+id/tvTituloAsistente"
         android:layout_width="266dp"
         android:layout_height="80dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginBottom="10dp"
         android:gravity="center"
         android:text="Asistentes"
         android:textColor="#FFEB3B"
         android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvUltimoanuncio1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -61,13 +50,12 @@
         android:id="@+id/tvUltimoanuncio1"
         android:layout_width="161dp"
         android:layout_height="24dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="Últimos anuncios"
         android:textColor="#FFEB3B"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/tvFiltro1"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerAsistente"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTituloAsistente" />
 
@@ -75,8 +63,9 @@
         android:id="@+id/recyclerviewAsistente"
         android:layout_width="399dp"
         android:layout_height="311dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="5dp"
         android:background="#07305d"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCrear1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvFiltrotexto1" />
@@ -85,52 +74,51 @@
         android:id="@+id/buttonCrear1"
         android:layout_width="242dp"
         android:layout_height="63dp"
-        android:layout_marginTop="17dp"
-        android:layout_marginBottom="76dp"
+        android:layout_marginTop="4dp"
         android:text="Crear anuncio Asistente"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerviewAsistente"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/recyclerviewAsistente" />
 
     <Spinner
         android:id="@+id/spinnerAsistente"
         android:layout_width="181dp"
         android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="3dp"
+        android:layout_marginTop="25dp"
         android:background="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/tvFiltrotexto1"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/buttonFiltroAsistente"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/tvUltimoanuncio1" />
 
     <EditText
         android:id="@+id/editTextTextPersonName"
         android:layout_width="393dp"
         android:layout_height="49dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="9dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="10dp"
         android:background="@color/white"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/spinnerAsistente"
+        android:hint="búsque campo ..."
+        app:layout_constraintBottom_toTopOf="@+id/tvFiltrotexto1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvUltimoanuncio1" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerAsistente" />
 
     <Button
         android:id="@+id/buttonFiltroAsistente"
         android:layout_width="165dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="28dp"
         android:text="Buscar"
         app:layout_constraintBottom_toBottomOf="@+id/spinnerAsistente"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/spinnerAsistente"
         app:layout_constraintTop_toTopOf="@+id/spinnerAsistente" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

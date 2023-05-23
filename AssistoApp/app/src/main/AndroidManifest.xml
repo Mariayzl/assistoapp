@@ -9,9 +9,9 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/nuka_cola_chapa"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/nuka_cola_chapa"
         android:supportsRtl="true"
         android:theme="@style/Theme.AssistoApp"
         tools:targetApi="31">
@@ -35,13 +35,7 @@
             android:name=".MapasActivity"
             android:exported="false"
             android:label="@string/title_activity_mapas" />
-        <activity
-            android:name=".BusquedaAvanzAsistenteActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+
         <activity
             android:name=".ModificarAnuncioCuidadosActivity"
             android:exported="false">

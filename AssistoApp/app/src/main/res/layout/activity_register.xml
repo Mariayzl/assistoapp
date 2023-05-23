@@ -32,27 +32,17 @@
 
     <Button
         android:id="@+id/buttonCrear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="53dp"
+        android:layout_width="275dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="52dp"
         android:backgroundTint="#07305d"
         android:text="crear"
         android:textColor="#FF9800"
+        app:layout_constraintBottom_toTopOf="@+id/tvInfo2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonVolver"
-        app:layout_constraintTop_toBottomOf="@+id/etpasswordRegistro" />
-
-    <Button
-        android:id="@+id/buttonVolver"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="53dp"
-        android:backgroundTint="#07305d"
-        android:text="volver"
-        android:textColor="#FF9800"
-        app:layout_constraintEnd_toStartOf="@+id/buttonCrear"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etpasswordRegistro" />
+        app:layout_constraintTop_toBottomOf="@+id/etpasswordRegistro"
+        app:layout_constraintVertical_bias="0.293" />
 
     <TextView
         android:id="@+id/tvpasswordRegistro"
@@ -103,12 +93,13 @@
         android:id="@+id/tvInfo2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="76dp"
         android:text="Assisto,Juntos por un bienestar compartido"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonVolver" />
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

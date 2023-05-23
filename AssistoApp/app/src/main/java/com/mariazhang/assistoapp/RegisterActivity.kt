@@ -54,12 +54,6 @@ class RegisterActivity : AppCompatActivity() {
                 }
         }
 
-        //Botón Volver
-        binding.buttonVolver.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
-        }
-
 
     }
 

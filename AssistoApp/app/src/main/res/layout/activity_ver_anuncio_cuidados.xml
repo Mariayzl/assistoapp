@@ -75,8 +75,8 @@
             android:layout_height="wrap_content"
             android:ems="30"
             android:enabled="false"
+            android:inputType="textMultiLine"
             android:hint="..."
-            android:inputType="textPersonName"
             android:minHeight="48dp"
             android:textColor="#3F51B5" />
 
@@ -95,7 +95,7 @@
             android:ems="30"
             android:enabled="false"
             android:hint="Descripción del cuidado"
-            android:inputType="textPersonName"
+            android:inputType="textMultiLine"
             android:minHeight="48dp"
             android:textColor="#3F51B5" />
 
@@ -226,36 +226,40 @@
                 android:enabled="false"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
+
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
             android:orientation="horizontal">
+
             <CheckBox
                 android:id="@+id/checkDiscapacidad4"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:enabled="false"
                 android:text="discapacidad brazos"
                 android:textColor="@color/black"
-                android:enabled="false"
                 tools:ignore="TouchTargetSizeCheck" />
+
             <CheckBox
                 android:id="@+id/checkDiscapacidad5"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="@color/black"
                 android:enabled="false"
                 android:text="discapacidad piernas"
+                android:textColor="@color/black"
                 tools:ignore="TouchTargetSizeCheck" />
+
             <CheckBox
                 android:id="@+id/checkDiscapacidad6"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:enabled="false"
                 android:text="bastones"
                 android:textColor="@color/black"
-                android:enabled="false"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
         <LinearLayout
