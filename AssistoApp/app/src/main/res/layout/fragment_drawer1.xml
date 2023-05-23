@@ -25,6 +25,7 @@
             android:text="Assisto"
             android:textColor="#FFEB3B"
             android:textSize="60sp"
+            android:layout_marginBottom="10dp"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="40dp" />
 
@@ -33,6 +34,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="En la pantalla principal de nuestra aplicación, encontrarás diferentes apartados para facilitar su experiencia.\nA continuación se detalla cada apartado de Assisto:"
+            android:padding="10dp"
+            android:justificationMode="inter_word"
             android:background="@color/white"
             android:textColor="@color/black"
             />
@@ -45,6 +48,7 @@
             android:text="Asistente"
             android:textColor="#FFEB3B"
             android:textSize="26sp"
+            android:layout_margin="10dp"
             tools:layout_editor_absoluteX="39dp"
             tools:layout_editor_absoluteY="183dp" />
 
@@ -53,6 +57,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="En el apartado de Asistente, podrá buscar anuncios para encontrar una persona cualificada en el cuidado especial de las personas, o crear un anuncio para ofrecer sus servicios orientandos a los cuidados a personas que requieran alguna necesidad o condición especial."
+            android:padding="10dp"
+            android:justificationMode="inter_word"
             android:background="@color/white"
             android:textColor="@color/black"
  />
@@ -65,6 +71,7 @@
             android:text="Cuidados"
             android:textColor="#FFEB3B"
             android:textSize="26sp"
+            android:layout_margin="10dp"
             tools:layout_editor_absoluteX="33dp"
             tools:layout_editor_absoluteY="275dp" />
 
@@ -75,6 +82,8 @@
             android:text="En el apartado de Cuidados, podrá buscar anuncios para ofrecer sus servicios en cuidados especiales, o crear un anuncio para buscar a una persona cualificadas para servicios orientados a los cuidados de personas que requieran alguna necesidad o condición especial."
             android:background="@color/white"
             android:textColor="@color/black"
+            android:padding="10dp"
+            android:justificationMode="inter_word"
             />
 
         <TextView
@@ -85,6 +94,7 @@
             android:text="Mis anuncios"
             android:textColor="#FFEB3B"
             android:textSize="26sp"
+            android:layout_margin="10dp"
             tools:layout_editor_absoluteX="33dp"
             tools:layout_editor_absoluteY="353dp" />
 
@@ -94,7 +104,9 @@
             android:layout_height="wrap_content"
             android:text="En el apartado de Mis anuncios, encontrarás sus anuncios creados tanto de tipo Asistente como de tipo Cuidados, en donde podrá modificarlos o eliminarlos."
             android:background="@color/white"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:padding="10dp"
+            android:justificationMode="inter_word"/>
 
         <TextView
             android:id="@+id/tvMapa"
@@ -104,6 +116,7 @@
             android:text="Mapa movilidad reducida"
             android:textColor="#FFEB3B"
             android:textSize="26sp"
+            android:layout_margin="10dp"
             tools:layout_editor_absoluteX="42dp"
             tools:layout_editor_absoluteY="465dp" />
 
@@ -113,6 +126,7 @@
             android:layout_height="64dp"
             android:backgroundTint="#FF9800"
             android:text="Abrir mapa"
+            android:textColor="@color/white"
             tools:layout_editor_absoluteX="42dp"
             tools:layout_editor_absoluteY="565dp" />
 
@@ -122,6 +136,7 @@
             android:layout_height="65dp"
             android:backgroundTint="#FF0008"
             android:text="Cerrar sesión"
+            android:textColor="@color/white"
             tools:layout_editor_absoluteX="42dp"
             tools:layout_editor_absoluteY="630dp" />
 

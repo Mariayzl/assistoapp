@@ -23,7 +23,7 @@
     <fragment
         android:id="@+id/drawer4Fragment"
         android:name="com.mariazhang.assistoapp.Drawer4Fragment"
-        android:label="Ventana Mis Anuncios"
+        android:label="Mis anuncios Asistente"
         tools:layout="@layout/fragment_drawer4" />
     <activity
         android:id="@+id/perfilActivity"
@@ -33,6 +33,6 @@
     <fragment
         android:id="@+id/drawer5Fragment"
         android:name="com.mariazhang.assistoapp.drawer5Fragment"
-        android:label="fragment_drawer5"
+        android:label="Mis anuncios de Cuidados"
         tools:layout="@layout/fragment_drawer5" />
 </navigation>
